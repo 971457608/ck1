@@ -1,0 +1,580 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: black;
+	cursor: pointer;
+}
+.section{
+	position: relative;
+	padding: 0px 15vw;
+	overflow: hidden;
+}
+.section1{
+	background: url(../img/ia_100000005.png) 0px 0px/10px 100%;
+}
+.section2{
+	background: url(../img/ia_100000012.png) 0px 0px/10px 100%;
+}
+.section3{
+	background: url(../img/ia_100000023.png) 0px 0px/10px 100%;
+}
+.section4{
+	background: url(../img/ia_100000031.png) 0px 0px/10px 100%;
+}
+.section5{
+	background: url(../img/ia_100000043.png) 0px 0px/10px 100%;
+}
+.hd{
+	width: 335px;
+	height: 66px;
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	margin-left: -167.5px;
+	z-index: 10;
+	background: url(../img/ia_100000046.png) no-repeat 82px 0px;
+}
+.section .lastimg{
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	z-index: 10;
+}
+.section1 .img-l{
+	float: left;
+	width: 29vw;
+	margin-top: 50px;
+	position: relative;
+	left: -44vw;
+	transition: all 1s;
+}
+.section1 .img-r{
+	float: right;
+	width: 41vw;
+	margin-top: 50px;
+	position: relative;
+	left: 56vw;
+	transition: all 1s;
+}
+.img-c{
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	width: 70vw;
+	margin-left: -35vw;
+	opacity: 0;
+}
+.section.active .img-c{
+	opacity: 1;
+	transition: all 1s 1s;
+}
+.section1.active .img-l,.section1.active .img-r{
+	left: 0;
+}
+.section2 .hd{
+	background: url(../img/ia_100000046.png) no-repeat 11px -100px;
+}
+.section3 .hd{
+	background: url(../img/ia_100000046.png) no-repeat 39.5px -199px;
+}
+.section4 .hd{
+	background: url(../img/ia_100000046.png) no-repeat 39.5px -286px;
+}
+.section5 .hd{
+	background: url(../img/ia_100000046.png) no-repeat 39.5px -372px;
+}
+#myMenu{
+	position: fixed;
+	top: 50%;
+	margin-top: -80px;
+	right: 20px;
+	z-index: 99;
+}
+#myMenu li{
+	position: relative;
+	margin: 5px 0px;
+}
+#myMenu li:hover span{
+	display: inline-block;
+}
+#myMenu span{
+	width: 60px;
+	position: absolute;
+	font-size: 12px;
+	top: 5px;
+	color: white;
+	opacity: 0.6;
+	right: 31px;
+    text-align: right;
+    display: none;
+    text-shadow: 1px 1px 0px #121010;
+}
+#myMenu b{
+	display: block;
+	width: 26px;
+	height: 26px;
+	background: url(../img/ia_100000004.png) no-repeat 0px -35px;
+	border-radius: 100%;
+}
+#myMenu .active b{
+	background: url(../img/ia_100000004.png) no-repeat 0px -0px;
+}
+.next-btn{
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	width: 50px;
+	height: 53px;
+	display: block;
+	margin-left: -25px;
+	opacity: 0.3;
+}
+.section.active .next-btn{
+	animation: mynextbtn 3s linear  infinite;
+}
+@keyframes mynextbtn{
+	0%{opacity: 0.3;}
+	50%{opacity: 1;}
+	100%{opacity: 0.3;}
+}
+.wx{
+	position: absolute;
+	top: -200px;
+	left: 50%;
+	width: 70vw;
+	margin-left:-35vw ;
+	transition: all 1s;
+}
+.section2.active .wx{
+	top: 0;
+}
+.section2{
+	padding: 0px 10vw;
+}
+.box2-l{
+	width: 800px;
+	position: absolute;
+	left: -1000px;
+	top: 100px;
+	z-index: 5;
+	transition: all 1s;
+}
+.section2.active .box2-l{
+	left: 12vw;
+}
+.box2-l .img-l{
+	display: block;
+	width: 100%;
+}
+.box2-l .img2{
+	position: absolute;
+    width: 469px;
+    left: 0px;
+    top: 52px;
+    opacity: 0;
+    transition: all 1s 1s;
+}
+.section2.active .img2{
+	opacity: 1;
+}
+.box2-l .img3{
+	position: absolute;
+    width: 480px;
+    left: -3px;
+    top: 75px;
+    opacity:0;
+    
+}
+.section2.active .img3{
+	transition: all 1s 2s;
+	opacity: 1;
+	left: 30px;
+    top: 10px;
+    width: 500px;
+}
+.hand-box{
+	width: 331px;
+    position: absolute;
+    top: 90px;
+    left: 100vw;
+}
+.section2.active .hand-box{
+	transition: all 1s 3s;
+	left: 130px;
+}
+.hand-box img{
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+.section2.active .hand{
+	transition: all 1s 4s;
+	left: 100vw;
+}
+.section2 .img-r{
+	width:40vw ;
+	position: absolute;
+	right: -55vw;
+	top: 50px;
+	transition: all 1s;
+}
+.section2.active .img-r{
+	right: 15vw;
+}
+.section3 .img1{
+	position: absolute;
+	top: -50px;
+	left: 0;
+	width: 100%;
+	opacity: 0;
+	transition: all 1s 0.5s;
+}
+.section3.active .img1{
+	top: 50px;
+	opacity: 1;
+}
+.section3 .img2,.section5 .img2{
+	position: absolute;
+	top: -50px;
+	left: 0;
+	width: 100%;
+	opacity: 0.3;
+	transition: all 1s 0.5s;
+}
+.section5 .img2{
+	opacity: 1;
+}
+.section3.active .img2{
+	top: 50px;
+	opacity: 1;
+	animation: myimg2 2s linear infinite;
+}
+@keyframes myimg2{
+	0%{opacity: 0.3;}
+	50%{opacity: 1;}
+	100%{opacity: 0.3;}
+}
+.section3 .img3,.section5 .img3{
+	position: absolute;
+	width: 40vw;
+	top: 250px;
+	left: -55vw;
+	transition: all 1s;
+}
+.section5 .img3{
+	top: 100px;
+}
+.section3.active .img3{
+	left: 15vw;
+}
+.section5.active .img3{
+	left: 10vw;
+}
+.section3 .img4,.section5 .img4{
+	position: absolute;
+	width: 35vw;
+	top: 50px;
+	right: -45vw;
+	transition: all 1s;
+}
+.section5 .img4{
+	top: 200px;
+	width: 40vw;
+}
+.section3.active .img4,.section5.active .img4{
+	right: 10vw;
+}
+.section5 .box1{
+	position: absolute;
+	width: 100vw;
+	top: 0px;
+	left: 0px;
+}
+.section5.active .box1{
+	animation: mybox1 15s linear infinite;
+}
+.section5 .box1 img{
+	display: block;
+	width: 100%;
+}
+@keyframes mybox1{
+	from{top: 0;}
+	to{top: -112.5vw;}
+}
+.section4 .box1{
+	position: absolute;
+	top: 50px;
+	left: -50vw;
+	width: 294px;
+	transition: all 1s;
+}
+.section4.active .box1{
+	left: 20vw;
+}
+.section4 .box1 img{
+	display: block;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+}
+.section4 .box1 .img1{
+	opacity: 1;
+}
+.section4 .box1 .img2{
+	left: -100px;
+	width: 530px;
+}
+.section4.active .img2{
+	transition: all 1s 1s;
+	left: -50px;
+	width: 530px;
+	opacity: 1;
+}
+.section4 .box1 .img3{
+	left: -2px;
+	width: 375px;
+}
+.section4.active .img3{
+	transition: all 1s 2s;
+	left: 48px;
+	opacity: 1;
+}
+.section4 .box1 .img4{
+	left: 205px;
+	top: 300px;
+	width: 152px;
+}
+.section4.active .img4{
+	transition: all 1s 3s;
+	opacity: 1;
+}
+.section4 .box1 .img5{
+	left: 3px;
+	top: 168px;
+	width: 421px;
+}
+.section4 .box1 .img6{
+	left: -110px;
+    top: 143px;
+    width: 710px;
+}
+.section4 .box1 .img7{
+	left: 227px;
+    top: 275px;
+    width: 40px;
+}
+.section4.active .box1 .img5,.section4.active .box1 .img6,.section4.active .box1 .img7{
+	transition: all 1s 4s;
+	opacity: 1;
+}
+.section4.active .img7{
+	animation: myimg7 2s linear infinite;
+}
+@keyframes myimg7{
+	from{
+		left: 227px;
+	    top: 275px;
+	    width: 40px;
+    }
+	to{
+		left: 207px;
+	    top: 255px;
+	    width: 80px;
+	}
+}
+.section4 .img-r{
+	position: absolute;
+	top: 250px;
+	right: -35vw;
+	width: 35vw;
+	transition: all 1s;
+}
+.section4.active .img-r{
+	right: 15vw;
+}
+@media screen and (max-width:768px ) {
+	.next-btn{
+		width: 30px;
+		height: auto;
+		bottom: 10px;
+	}
+	.next-btn img{
+		width: 100%;
+	}
+	.section .lastimg{
+		width: 80%;
+		right: 10%;
+		bottom: 60px;
+	}
+	.section1 .img-l {
+	    width: 60vw;
+	    position: absolute;
+	    left: -50vw;
+	    top: 200px;
+	    margin-top: 0px;
+	}
+	.section1.active .img-l{
+		left: 20vw;
+	}
+	.section1 .img-r {
+	    display: none;
+	}
+	.section2 .img-r {
+	    display: none;
+	}
+	.box2-l {
+	    width: 300px;
+	    position: absolute;
+	    left: -150px;
+	    margin-left: -150px;
+	    top: 250px;
+	}
+	.section2.active .box2-l {
+	     left: 50%; 
+	}
+	.box2-l .img2{
+		width: 176px;
+	    left: 0px;
+	    top: 19px;
+	}
+	.box2-l .img3{
+		left: 0px;
+	    top: 0px;
+	    width: 200px;
+	}
+	.section2.active .img3 {
+	    left: 10px;
+	    top: -4px;
+	    width: 200px;
+	}
+	.hand-box {
+	    width: 170px;
+	    position: absolute;
+	    top: 30px;
+	    left: 100vw;
+	}
+	.section2.active .hand-box{
+		left: 45px;
+	}
+	.wx {
+	    position: absolute;
+	    top: -200px;
+	    left: 50%;
+	    width: 80vw;
+	    margin-left: -40vw;
+	}
+	.section2.active .wx{
+		top: 100px;
+	}
+	.section3 .img4, .section5 .img4 {
+	    position: absolute;
+	    width: 60vw;
+	    top: 200px;
+	    right: -60vw;
+	}
+	.section3.active .img4, .section5.active .img4 {
+	    position: absolute;
+	    right: 20vw;
+	}
+	.section3 .img3, .section5 .img3 {
+	    display: none;
+	    transition: none;
+	}
+	.section5 .img4{
+		width: 80vw;
+		right: -80vw;
+	}
+	.section5.active .img4{
+		right: 10vw;
+	}
+	.hd{
+		width: 300px;
+		margin-left: -150px;
+		background: url(../img/ia_100000046.png) no-repeat 70px 0px;
+	}
+	.section2 .hd {
+	    background: url(../img/ia_100000046.png) no-repeat 17px -100px;
+	}
+	.section3 .hd {
+	    background: url(../img/ia_100000046.png) no-repeat 20px -199px;
+	}
+	.section4 .hd {
+	    background: url(../img/ia_100000046.png) no-repeat 20px -286px;
+	}
+	.section5 .hd {
+	    background: url(../img/ia_100000046.png) no-repeat 20px -372px;
+	}
+	#myMenu {
+	    right: 10px;
+	}
+	.section4 .img-r{
+		display: none;
+		transition: none;
+	}
+	.section4 .box1 {
+	    top: 150px;
+	    left: -50vw;
+	    width: 190px;
+	}
+	.section4.active .box1{
+		left: 15vw;
+	}
+	.section4 .box1 .img2 {
+	    left: -60px;
+	    width: 342px;
+	}
+	.section4.active .img2 {
+	    left: -39px;
+	    width: 342px;
+	}
+	.section4 .box1 .img3 {
+	    left: 0px;
+	    width: 240px;
+	}
+	.section4.active .img3 {
+	    left: 20px;
+	    width: 240px;
+	}
+	.section4 .box1 .img4 {
+	    left: 100px;
+	    top: 186px;
+	    width: 100px;
+	}
+	.section4 .box1 .img5 {
+	    left: 2px;
+	    top: 110px;
+	    width: 260px;
+	}
+	.section4 .box1 .img6 {
+	    left: -17px;
+	    top: 107px;
+	    width: 300px;
+	}
+	.section4 .box1 .img7 {
+	    left: 104px;
+	    top: 168px;
+	    width: 40px;
+	}
+	@keyframes myimg7{
+		from{
+			left: 104px;
+		    top: 168px;
+		    width: 40px;
+	    }
+		to{
+			left: 84px;
+		    top: 148px;
+		    width: 80px;
+		}
+	}
+}

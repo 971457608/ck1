@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*以下是我们得css代码*/
+			p{
+				color: red;
+			}
+		</style>
+		<link type="text/css" href="css/01.css" rel="stylesheet" />
+		<!--<style type="text/css">
+			/*不推荐使用这种方式引入外部样式表*/
+			@import url("css/01.css");
+		</style>-->
+	</head>
+	<body>
+		<h3>1.内部样式表</h3>
+		<p>进口大发沙发沙发沙发沙发沙发沙发沙发沙发</p>
+		<h3>2.内联样式表</h3>
+		<span style="color: blue;">回家双卡单卡是电话卡是党和国家凯撒更多的啥都干啥就</span>
+		<h3>3.引入外部样式表</h3>
+		<b>的房间看电视罚款决定书房价快速导航反馈</b>
+	</body>
+</html>

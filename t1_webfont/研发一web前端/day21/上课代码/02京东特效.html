@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				height: 1000px;
+				background: palegreen;
+			}
+			#topbar{
+				width: 100%;
+				height: 60px;
+				background: red;
+				position: fixed;
+				top: -60px;
+				left: 0px;
+				transition: all 1s;
+			}
+			.box1{
+				position: relative;
+				background: burlywood;
+			}
+			#list{
+				position: absolute;
+				right: 20px;
+				line-height: 40px;
+				top: 0px;
+				width: 80px;
+				list-style: none;
+				text-align: center;
+				background: orangered;
+				transition: all 1s;
+			}
+			#list li{
+				border: solid 1px white;
+				margin-top: -1px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var list = document.getElementById("list");
+				var topbar = document.getElementById("topbar");
+				window.onscroll = function(){
+					var t1 = document.documentElement.scrollTop||document.body.scrollTop;
+					if(t1>=1000){
+						list.style.transition="all 1s";
+						topbar.style.transition="all 1s";
+						list.style.top="80px";
+						list.style.position="fixed";
+						topbar.style.top="0px";
+						
+					}else{
+						list.style.transition="none";
+						topbar.style.transition="none";
+						topbar.style.top="-60px";
+						list.style.top="0px";
+						list.style.position="absolute";
+					}
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box box1">
+			<ul id="list">
+				<li>衣服</li>
+				<li>衣服</li>
+				<li>衣服</li>
+				<li>衣服</li>
+				<li>衣服</li>
+			</ul>
+		</div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div class="box"></div>
+		<div id="topbar"></div>
+		
+	</body>
+</html>

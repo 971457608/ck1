@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body{
+				background: #f5f5f5;
+			}
+			ul{
+				list-style: none;
+			}
+			.obox{
+				width: 500px;
+				margin: 100px auto;
+			}
+			.list1{
+				overflow: hidden;
+			}
+			.list1 li{
+				float: left;
+				height: 40px;
+				line-height: 40px;
+				width: 100px;
+				text-align: center;
+				margin-right: 15px;
+				position: relative;
+				cursor: pointer;
+			}
+			.list1 h3{
+				position: relative;
+				z-index: 10;
+			}
+			.list1 div{
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				width: 100%;
+				height: 0px;
+				background: white;
+				border-top: solid 3px red;
+				transition: all 0.5s;
+			}
+			.list1 li:first-child div{
+				height: 40px;
+			}
+			.list2{
+				height: 200px;
+				background: white;
+				position: relative;
+			}
+			.list2 li{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				padding: 20px;
+				display: none;
+			}
+			.list2 li:first-child{
+				display: block;
+			}
+			.list2 h3{
+				margin-bottom: 10px;
+			}
+			.list2 p{
+				text-indent: 32px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var list1 = document.querySelector(".list1");
+				var oli1 = list1.querySelectorAll("li");
+				var list2 = document.querySelector(".list2");
+				var oli2 = list2.querySelectorAll("li");
+				for(var i=0;i<oli1.length;i++){
+					oli1[i].index = i;
+					oli1[i].onmouseenter = enter;
+					function enter(){
+						var box = this.querySelector("div");
+						box.style.height="40px";
+					};
+					oli1[i].onmouseleave = leave;
+					function leave(){
+						var box = this.querySelector("div");
+						box.style.height="0px";
+					};
+					oli1[i].onclick = click;
+					function click(){
+						this.onmouseenter=null;
+						this.onmouseleave=null;
+						for(var j=0;j<oli1.length;j++){
+							if(j!=this.index){
+								oli1[j].onmouseenter=enter;
+								oli1[j].onmouseleave=leave;
+								oli1[j].querySelector("div").style.height=0;
+							}
+							oli2[j].style.display="none";
+						}
+						oli2[this.index].style.display="block";
+					};
+					oli1[0].onmouseenter=null;
+					oli1[0].onmouseleave=null;
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="obox">
+			<ul class="list1">
+				<li>
+					<h3>section1</h3>
+					<div></div>
+				</li>
+				<li>
+					<h3>section2</h3>
+					<div></div>
+				</li>
+				<li>
+					<h3>section3</h3>
+					<div></div>
+				</li>
+			</ul>
+			<ul class="list2">
+				<li>
+					<h3>section1</h3>
+					<p>的方式水水水水水水水水水水水水水水水水发生的尽快恢复可见当时帆帆帆帆帆帆帆帆附近的客户付款节点是否健康都十分考究的速度加快恢复可见当时发动机快速返还借款</p>
+				</li>
+				<li>
+					<h3>section2</h3>
+					<p>的方式水水水水水水水水水水水水水水水水发生的尽快恢复可见当时帆帆帆帆帆帆帆帆附近的客户付款节点是否健康都十分考究的速度加快恢复可见当时发动机快速返还借款</p>
+				</li>
+				<li>
+					<h3>section3</h3>
+					<p>的方式水水水水水水水水水水水水水水水水发生的尽快恢复可见当时帆帆帆帆帆帆帆帆附近的客户付款节点是否健康都十分考究的速度加快恢复可见当时发动机快速返还借款</p>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				//getElementById()、
+				//var box = document.getElementById("box1");
+				
+				//getElementsByTagName()、返回数组
+				//var box = document.getElementsByTagName("div");
+				
+				//getElementsByName()、返回数组
+				//var box = document.getElementsByName("mybox");
+				
+				//getElementsByClassName()、返回数组
+				//var box = document.getElementsByClassName("box");
+				
+				//返回第一个
+				//var box = document.querySelector("div")
+				
+				//返回数组
+				var box = document.querySelectorAll("#box1")
+				console.log(box[0].innerHTML);
+				
+				//getAttribute()
+				console.log(box[0].className);
+				console.log(box[0].getAttribute("class"));
+				
+				//setAttribute()
+				box[0].setAttribute("title","haha");
+				
+				//removeAttribute()
+				box[0].removeAttribute("id");
+				
+				//innerHTML,innerText, outerHTML
+				console.log(box[0].innerHTML);
+				
+				console.log(box[0].innerText);
+				
+				console.log(box[0].outerHTML);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="box" name="mybox" title="hehe" id="box1"><span>盒子1</span></div>
+		<div class="box" name="mybox" id="box1">盒子2</div>
+	</body>
+</html>

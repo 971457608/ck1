@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//创建对象
+			var obj1 = new Object();
+			//添加属性
+			obj1.name="张三";
+			obj1.sex = "男";
+			//添加方法
+			obj1.fn = function(){
+				console.log("会说话");
+			};
+			
+			
+			//字面量方式创建对象
+			var obj2 = {
+				name:"李四",
+				sex:"男",
+				age:18,
+				fn:function(){
+					console.log("会走路");
+				},
+				fn2:function(){
+					console.log("会吃饭");
+				}
+			};
+			
+			//使用 delete 删除对象属性 
+			delete obj2.name;
+			console.log(obj2.name);
+			console.log(obj2["sex"]);
+			obj2.fn2();
+			
+//			2、从前有座山（Mountain）,
+//			山里有座庙（Temple）;
+//			庙里有个老和尚（oldMonk）
+//			山有name,height,
+//			庙有name,area 
+//			和尚能挑水
+			var Mountain ={
+				name:"山",
+				height:1000,
+				Temple:{
+					name:"庙",
+					area:200,
+					oldMonk:{
+						fn:function(){
+							console.log("能吃肉");
+						}
+					}
+				}
+			}
+			console.log(Mountain.Temple.name);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

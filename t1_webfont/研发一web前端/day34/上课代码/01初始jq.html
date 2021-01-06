@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+//			document.addEventListener("DOMContentLoaded",function(){
+//				var btn = document.querySelector(".btn");
+//				var p1 = document.querySelector("p");
+//				btn.onclick = function(){
+//					p1.style.color = "red";
+//				}
+//			})
+//			$(document).ready(function(){
+//			  // 在这里写你的代码...
+//			});
+
+			//简写
+			$(function(){
+				$(".btn").click(function(){
+					$("p").css("color","blue");
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button class="btn">按钮</button>
+		<p>fsdfdsfdf</p>
+	</body>
+</html>

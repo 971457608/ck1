@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text/css" href="fullpage.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="jquery-3.4.1.js"></script>
+		<script type="text/javascript" src="fullpage.js" ></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.section1{
+				background: red;
+			}
+			.section2{
+				background: green;
+			}
+			.section3{
+				background: orange;
+			}
+			.section4{
+				background: chocolate;
+			}
+			.slide img{
+				width: 100%;
+				height: 100%;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background: blue;
+				position: absolute;
+				top: 100px;
+				left: 100px;
+				transition: all 2s;
+			}
+			.section.active .box{
+				left: 45%;
+			}
+			#myMenu{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				z-index: 99;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			#myMenu li{
+				float: left;
+				list-style: none;
+				padding: 10px 20px;
+				background: white;
+				margin: 10px;
+			}
+			#myMenu .active{
+				background: black;
+			}
+			#myMenu .active a{
+				color: white;
+			}
+			.box5{
+				height: 300px;
+				background: palegreen;
+			}
+		</style>
+	</head>
+	<body>
+		<ul id="myMenu">
+		    <li data-menuanchor="Page1" class="active"><a href="#Page1">第一屏</a></li>
+		    <li data-menuanchor="Page2"><a href="#Page2">第二屏</a></li>
+		    <li data-menuanchor="Page3"><a href="#Page3">第三屏</a></li>
+		    <li data-menuanchor="Page4"><a href="#Page4">第四屛</a></li>
+		</ul>
+		<div id="fullpage">
+			<div class="section section1">
+				<div class="slide">
+					<img src="img/ia_100000012.jpg" />
+				</div>
+				<div class="slide">
+					<img src="img/ia_100000013.jpg" />
+				</div>
+				<div class="slide">
+					<img src="img/a1.jpg" />
+				</div>
+			</div>
+			<div class="section section2 active">
+				<a href="#Page3">哈哈</a>
+			</div>
+			<div class="section section3">
+				<div class="box"></div>
+			</div>
+			<div class="section section4">Some section4</div>
+			<div class="section section5 fp-auto-height">
+				<div class="box5"></div>
+			</div>
+		</div>
+		
+	</body>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+				continuousVertical: true,//循环滚动
+				anchors: ['Page1', 'Page2', 'Page3', 'Page4'],
+    			menu: '#myMenu',
+    			navigation:true,
+    			scrollBar: false,
+    			scrollingSpeed: 700,//设置滚动速度，单位毫秒，默认700
+				loopBottom: true,//滚动到最低部后是否连续滚动到顶部，默认为false
+			});
+			//幻灯片自动滚动
+			setInterval(function(){
+		        $.fn.fullpage.moveSlideLeft();
+		    }, 3000);
+		    //自动滚动
+//		    setInterval(function(){
+//		    	$.fn.fullpage.moveSectionDown(); 
+//		    }, 3000);
+		});
+	</script>
+</html>

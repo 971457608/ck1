@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			1.写一个函数判断一个年份是不是闰年
+			function fn(n){
+				if((n%4==0 && n%100!=0)||n%400==0){
+					console.log(n+"是闰年");
+				}else{
+					console.log(n+"是平年");
+				}
+			}
+			fn(2020);
+			
+			window.onload = function(){
+				var v1 = document.getElementById("v1");
+				var v2 = document.getElementById("v2");
+				var v3 = document.getElementById("v3");
+				var btn1 = document.getElementById("btn1");
+				var v4 = document.getElementById("v4");
+				var v5 = document.getElementById("v5");
+				var v6 = document.getElementById("v6");
+				var v7 = document.getElementById("v7");
+				var v8 = document.getElementById("v8");
+				var btn3 = document.getElementById("btn3");
+				var s1 = document.getElementById("s1");
+				var p1 = document.getElementById("p1");
+				var btn2 = document.getElementById("btn2");
+				btn1.onclick = function(){
+					fn1(v1.value,v2.value,v3.value);
+				}
+				function fn1(y,m,d){
+					if(y>0 &&y.length!=0){
+						if(m==1||m==3||m==5||m==7||m==8||m==10||m==12){
+							if(d>=1&&d<=31){
+								alert(y+"年"+m+"月"+d+"日是一个正确日期");
+							}else{
+								alert(y+"年"+m+"月"+d+"日是一个错误日期");
+							}
+						}else if(m==4||m==6||m==9||m==11){
+							if(d>=1&&d<=30){
+								alert(y+"年"+m+"月"+d+"日是一个正确日期");
+							}else{
+								alert(y+"年"+m+"月"+d+"日是一个错误日期");
+							}
+						}else if(m==2){
+							if((y%4==0 && y%100!=0)||y%400==0){
+								if(d>=1&&d<=29){
+									alert(y+"年"+m+"月"+d+"日是一个正确日期");
+								}else{
+									alert(y+"年"+m+"月"+d+"日是一个错误日期");
+								}
+							}else{
+								if(d>=1&&d<=28){
+									alert(y+"年"+m+"月"+d+"日是一个正确日期");
+								}else{
+									alert(y+"年"+m+"月"+d+"日是一个错误日期");
+								}
+							}
+						}else{
+							alert(y+"年"+m+"月"+d+"日是一个错误日期");
+						}
+					}else{
+						alert(y+"年"+m+"月"+d+"日是一个错误日期");
+					}
+				}
+				
+				
+				//3.制作一个简易计算器
+				btn2.onclick = function(){
+					if(s1.value=="+"){
+						v6.value = parseFloat(v4.value)+(v5.value-0);
+					}
+					else if(s1.value=="-"){
+						v6.value = parseFloat(v4.value)-(v5.value-0);
+					}
+					else if(s1.value=="*"){
+						v6.value = parseFloat(v4.value)*(v5.value-0);
+					}
+					else if(s1.value=="/"){
+						v6.value = parseFloat(v4.value)/(v5.value-0);
+					}
+					else{
+						v6.value ="NAN";
+					}
+				}
+				
+				
+				//4. 输入任意两个数，如果第一个数小，从第一个数打印到第二个数，如果第二个数小，从第二个数打印到第一个数。（**）
+				btn3.onclick = function(){
+					var a1 = v7.value;
+					var a2 = v8.value;
+					p1.innerHTML ="";
+					if(a1>a2){
+						for(var i=a2;i<=a1;i++){
+							if(i==a1){
+								p1.innerHTML += i;
+							}else{
+								p1.innerHTML += i+",";
+							}
+						}
+					}else{
+						for(var i=a1;i<=a2;i++){
+							if(i==a2){
+								p1.innerHTML += i;
+							}else{
+								p1.innerHTML += i+",";
+							}
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h3>2.年月日分别为自定义函数的参数，判断某一个日期是否为正确的日期;例：fn(2020,8,25);</h3>
+		<input id="v1" type="text" placeholder="请输入年份" />
+		<input id="v2" type="text" placeholder="请输入月份" />
+		<input id="v3" type="text" placeholder="请输入日份" />
+		<button id="btn1">判断年份</button>
+		<h3>3.制作一个简易计算器</h3>
+		<input id="v4" type="text" />
+		<select id="s1">
+			<option>+</option>
+			<option>-</option>
+			<option>*</option>
+			<option>/</option>
+		</select>
+		<input id="v5" type="text" />
+		=
+		<input id="v6" type="text" />
+		<button id="btn2">计算</button>
+		<h3>4. 输入任意两个数，如果第一个数小，从第一个数打印到第二个数，如果第二个数小，从第二个数打印到第一个数。（**）</h3>
+		<input id="v7" type="text" />
+		<input id="v8" type="text" />
+		<button id="btn3">打印</button>
+		<p id="p1"></p>
+	</body>
+</html>

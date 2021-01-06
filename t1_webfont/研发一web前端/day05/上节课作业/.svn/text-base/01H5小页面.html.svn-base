@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.obox{
+				width: 400px;
+				height: 630px;
+				background: url(img/b0.jpg);
+				margin: 50px auto;
+			}
+			.oh1{
+				font-size: 50px;
+				height: 50px;
+				line-height: 50px;
+				padding-top: 45px;
+				font-weight: 900;
+				color: white;
+				text-align: center;
+			}
+			.p1{
+				font-size: 14px;
+				height: 14px;
+				line-height: 14px;
+				text-align: center;
+				color: white;
+				margin: 10px 0px 12px;
+			}
+			.oh2{
+				padding: 0px;
+				font-size: 42px;
+				height: 42px;
+				line-height: 42px;
+			}
+			.oh2 span{
+				font-size: 48px;
+			}
+			.v1{
+				width: 321px;
+				height: 46px;
+				border: solid 2px red;
+				border-radius: 6px;
+				text-align: center;
+				margin-left: 37px;
+				color: #999;
+				font-size: 18px;
+				margin-top: 48px;
+				outline:medium ;/*去掉轮廓*/
+			}
+			.img1{
+				width: 186px;
+				height: 49px;
+				background: url(img/b2.png);
+				margin: 26px auto 41px;
+			}
+			.box1{
+				width: 352px;
+				height: 18px;
+				margin: 0 auto;
+				text-align: center;
+				color: white;
+				font-size: 18px;
+			}
+			.line{
+				border-top: solid 1px white;
+				width: 126px;
+				margin-top: 8.5px;
+			}
+			.line1{
+				float: left;
+			}
+			.line2{
+				float: right;
+			}
+			.list{
+				margin-left: 25px;
+				list-style-position: inside;
+				color: white;
+				margin-top: 18px;
+			}
+			.list li{
+				height: 16px;
+				line-height: 16px;
+				margin-top: 6px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="obox">
+			<h1 class="oh1">新人有礼</h1>
+			<p class="p1">立享</p>
+			<h1 class="oh1 oh2"><span>20</span>元</h1>
+			<p class="p1">现金券</p>
+			<input class="v1" type="text" value="请输入11位手机号" />
+			<div class="img1"></div>
+			<div class="box1">
+				<div class="line line1"></div>
+				<span>活动规则</span>
+				<div class="line line2"></div>
+			</div>
+			<ol class="list">
+				<li>注册礼券有效期：以券面信息为准；</li>
+				<li>本活动仅限未绑定手机号的用户参与，限一次；</li>
+				<li>注册礼券金额为20元。</li>
+			</ol>
+		</div>
+	</body>
+</html>

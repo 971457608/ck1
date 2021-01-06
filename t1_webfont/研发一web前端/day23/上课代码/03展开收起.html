@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list{
+				width: 500px;
+				list-style: none;
+				margin: 50px auto 0px;
+			}
+			.list li{
+				background: orange;
+				margin-top: 20px;
+				border-radius: 10px;
+				padding: 20px;
+			}
+			.list li:first-child p{
+				
+			}
+			.list p{
+				margin: 10px;
+				text-indent: 32px;
+			}
+			.list button{
+				float: right;
+				padding: 0px 4px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var btn = document.querySelectorAll("button");
+				var op = document.querySelectorAll("p");
+				for(var j=0;j<op.length;j++){
+					op[j].setAttribute("name",op[j].innerHTML);
+					if(j>=1){
+						op[j].innerHTML = op[j].getAttribute("name").substring(0,30)+"...";
+					}
+				}
+				for(var i=0;i<btn.length;i++){
+					btn[i].onclick = function(){
+						var p1 = this.parentNode.querySelector("p");
+						if(this.innerHTML=="收起"){
+							this.innerHTML="展开";
+							p1.innerHTML = p1.getAttribute("name").substring(0,30)+"...";
+						}else{
+							this.innerHTML="收起";
+							p1.innerHTML = p1.getAttribute("name");
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul class="list">
+			<li>
+				<h3>1.技术的封建时代</h3>
+				<p>苦奋斗是分开计算始发货艰苦奋斗是分开计算的话反馈加分的考生反抗集散地和反抗始发货艰苦奋斗是分开计算的话反馈加分的考生反抗集散地和反抗的话反馈加加分的考生反抗集分的考生反抗集散地...</p>
+				<span>2020-12-03</span>
+				<button>收起</button>
+			</li>
+			<li>
+				<h3>1.技术的封建时代</h3>
+				<p>点击始发货艰苦奋斗是分开计算的话反馈加分的考生反抗集散地和反抗开始发货艰苦奋斗是分开计算的话反馈加分的考生反抗集散地和反抗精神东方航空放到数据库恢复</p>
+				<span>2020-12-03</span>
+				<button>展开</button>
+			</li>
+			<li>
+				<h3>1.技术的封建时代</h3>
+				<p>点击开始发货艰苦奋斗是分开计算的话反馈加分的考生反抗始发货艰苦奋斗是分开计算的话反馈加分的考生反抗集散地和反抗始发货艰苦奋斗是分开计算的话反馈加分的考生反抗集散地和反抗集散地和反抗精神东方航空放到数据库恢复</p>
+				<span>2020-12-03</span>
+				<button>展开</button>
+			</li>
+		</ul>
+	</body>
+</html>

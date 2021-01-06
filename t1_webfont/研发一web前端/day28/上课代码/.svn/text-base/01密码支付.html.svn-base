@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #f5f5f5;
+			}
+			.obox{
+				width: 300px;
+				background: white;
+				height: 200px;
+				margin: 100px auto;
+				border-radius: 20px;
+				text-align: center;
+				overflow: hidden;
+				position: relative;
+				left: 0px;
+			}
+			@keyframes myobox{
+				0%{
+					left: 0;
+				}
+				25%{
+					left: -10px;
+				}
+				50%{
+					left: 0px;
+				}
+				75%{
+					left: 10px;
+				}
+				100%{
+					left: 0px;
+				}
+			}
+			.obox span{
+				position: absolute;
+				top: 4px;
+				left: 20px;
+				font-size: 30px;
+			}
+			.obox h3{
+				margin-top: 40px;
+			}
+			.obox p{
+				color: red;
+				margin-top: 5px;
+				display: none;
+			}
+			.box1{
+				font-size: 0px;
+				margin-top: 15px;
+				overflow: hidden;
+			}
+			.box1 input{
+				width: 30px;
+				height: 30px;
+				margin-left: -1px;
+				outline: medium;
+				text-align: center;
+			}
+			a{
+				display: inline-block;
+				font-size: 14px;
+				color: blue;
+				margin-top: 20px;
+				text-decoration: none;
+			}
+			input{
+				caret-color: transparent;
+				font-size: 30px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var obox = document.querySelector(".obox");
+				var s1 = document.querySelector("span");
+				var p1 = document.querySelector("p");
+				var box1 = document.querySelector(".box1");
+				var inp = box1.querySelectorAll("input");
+				var j = 0;
+				inp[0].focus();
+				window.onkeyup = function(){
+					if(inp[j].value.length>0){
+						j++;
+						if(j==6){
+							//判断密码
+							var str ="";
+							for(var k=0;k<inp.length;k++){
+								str+=inp[k].value;
+							}
+							if(str=="123456"){
+								alert("支付成功！");
+							}else{
+								p1.style.display="block";
+								obox.style.animation="myobox 0.1s infinite";
+								setTimeout(function(){
+									obox.style.animation="none";
+									for(var k=0;k<inp.length;k++){
+										inp[k].value="";	
+									}
+									j=0;
+									inp[j].focus();
+									p1.style.display="none";
+								},1000)
+							}
+							return false;
+						}
+						
+					}else{
+						j--;
+						if(j<0){
+							j=0;
+						}
+						inp[j].value="";
+					}
+					inp[j].focus();
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div class="obox">
+			<span>×</span>
+			<h3>请输入支付密码</h3>
+			<p>密码错误</p>
+			<div class="box1">
+				<input type="password" maxlength="1" />
+				<input type="password" maxlength="1"/>
+				<input type="password" maxlength="1"/>
+				<input type="password" maxlength="1"/>
+				<input type="password" maxlength="1"/>
+				<input type="password" maxlength="1"/>
+			</div>
+			<a href="#">忘记密码？</a>
+		</div>
+	</body>
+</html>

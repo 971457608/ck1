@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				-webkit-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+			}
+			.active{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				width: 0;
+				opacity: 1;
+			}
+			input{
+				/*caret-color: transparent;*/
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				document.onclick = function(e){
+					var e = e||event;
+					var img1 = document.createElement("img");
+					img1.src="img/paopao"+Math.ceil(Math.random()*5)+".png";
+					img1.className="active";
+					img1.setAttribute("draggable",false);
+					var h = window.innerHeight;
+					img1.style.top = h+"px";
+					img1.style.left = e.clientX+"px";
+					document.body.appendChild(img1);
+					var w = 0;
+					var op = 1.5;					
+					var timer = setInterval(function(){
+						w+=2;
+						op-=0.01;
+						h-=5;
+						img1.style.width =w+"px";
+						img1.style.left = e.clientX-w/2+"px";
+						img1.style.top = h+"px";
+						img1.style.opacity = op;
+						console.log(op)
+						if(op<=0){
+							clearInterval(timer);
+							document.body.removeChild(img1);
+						}
+					},10)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input class="v1" type="text" />
+		<input class="v2" type="text" />
+	</body>
+	<script type="text/javascript">
+		document.querySelector('.v1').focus();
+		document.querySelector('.v1').oninput = function(){
+			document.querySelector('.v2').focus();
+		}
+	</script>
+</html>

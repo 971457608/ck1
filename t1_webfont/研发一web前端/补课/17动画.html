@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				/*初始状态*/
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				-webkit-animation-name:mybox ;
+				-webkit-animation-duration:3s;
+				animation-name:mybox ;
+				animation-duration:3s;
+				-webkit-animation: mybox 3s;
+				animation: mybox 5s steps(5,end) 0s 1 alternate both;
+			}
+			.box:hover{
+				animation-play-state: paused;
+			}
+			@keyframes mybox{
+				/*动画第一帧*/
+				0%{
+					width: 100px;
+					height: 100px;
+					top: 0px;
+					left: 0px;
+				}				
+				/*动画最后一帧*/
+				50%{
+					width: 200px;
+					height: 200px;
+					top: 0px;
+					left: 0px;
+				}
+				100%{
+					width: 200px;
+					height: 200px;
+					top: 500px;
+					left: 0px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

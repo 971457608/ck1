@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//定义字符串
+			var str1 = new String("hello word");
+			
+			var str2 = String("hello");
+			
+			var str3 = "hello";
+			
+			//length
+			console.log(str1.length);
+			console.log(str1[0]);
+			str1[0]="w";//无效
+			str1="wello word";
+			console.log(str1);
+			
+			console.log(typeof str3);
+			
+			//字符串方法
+			var str = "hello wOrd";
+			//1.str.charAt(3)    //获取下标为3的字符
+			console.log(str.charAt(0));
+			
+			//2.str.charCodeAt(3)   //获取下标为3的字符的编码(ASCII码)
+			console.log(str.charCodeAt(0));//"104"
+			
+			//3.String.fromCharCode(94)    //ASCII编码转换成字符
+			console.log(String.fromCharCode(65));
+			
+			//4. str.indexOf("abc")  查找字符串第一次出现的位置,如果没找到则返回-1
+			console.log(str.indexOf("o"));
+			
+			//5.查找字符串最后一次出现的位置,如果没找到则返回-1
+			console.log(str.lastIndexOf("y"));
+			
+			//6. str.search() 正则匹配 (返回第一次出现的位置)
+			console.log(str.search("y"));
+			
+			//正则表达式
+			var re = /^[a-z0-9_-]{3,16}$/;
+			var regex = /^1[3456789]\d{9}$/;
+			//test() 方法用于检测一个字符串是否匹配某个模式.
+			if(re.test(str)){
+				console.log("匹配成功");
+			}else{
+				console.log("数据不匹配");
+			}
+			
+			//7.str.replace() 替换字符串
+			//var str1 = str.replace("o","y");
+			var str1 = str.replace(/o/gi,"y");
+			//注: g表示进行全局匹配，i表示匹配的时候忽略大小写
+			
+			//8.substring(start,end); //截取字符串 范围是[start, end)
+			var str1 = str.substring(6,7);
+			console.log(str1);
+			
+			//9.split(separator, howmany)—根据分隔符、拆分成数组
+			var arr =str.split(" ");
+			console.log(arr);
+			
+			//10.eval() 方法可计算某个字符串
+			var a1 = "10+20";
+			var a2 = "20";
+			console.log(eval(a1));
+			
+			//11.toLowerCase() 方法用于把字符串转换成小写
+			console.log(str.toLowerCase());
+			
+			//12.toUpperCase() 方法用于把字符串转换成大写
+			console.log(str.toUpperCase());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link media="screen and (min-width:1024px)" rel="stylesheet" href="css/a1.css" />
+		<link media="screen and (max-width:1024px)" rel="stylesheet" href="css/a2.css" />
+		<style type="text/css">
+			.box2{
+				width: 200px;
+				height: 100px;
+				background: red;
+			}
+			/*大于等于500*/
+			/*@media screen and (min-width:500px ) {
+				.box2{
+					height: 300px;
+				}
+			}
+			@media screen and (max-width:500px ) {
+				.box2{
+					background: black;
+				}
+			}*/
+			
+			/*大于500,小于1000*/
+			/*@media screen and (min-width:500px ) and  (max-width:1000px ){
+				.box2{
+					border-radius: 100%;
+				}
+			}*/
+			
+			/*小于500,或者大于1000*/
+			/*@media screen and (min-width:1000px ),screen and (max-width:500px ) {
+				.box2{
+					border-radius: 100%;
+				}
+			}*/
+			
+			@media not screen and (min-width:1000px ) {
+				.box2{
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box2"></div>
+	</body>
+</html>

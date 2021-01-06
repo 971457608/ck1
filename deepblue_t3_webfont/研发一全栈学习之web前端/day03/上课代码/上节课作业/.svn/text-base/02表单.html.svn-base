@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<p>小时候，我的梦想是一名科学家。返回结果的设计风格黄金时代官方函数递归犯得上广泛的和技术犯规的环境</p>
+		qq账号：<input type="text" value="qq账号" />
+		<br />
+		密码：<input type="password" />
+		<br />
+		<input type="submit" />
+		<input type="button" value="按钮" />
+		<input type="reset" />
+		爱好：<input type="checkbox" checked="" />吃饭
+		<input type="checkbox" />睡觉
+		<input type="checkbox" />撸啊撸
+		<br />
+		性别：
+		<input type="radio" name="mysex" checked="" />男
+		<input type="radio" name="mysex" />女
+		<br />
+		户口所在地：
+		<select>
+			<option>广西南宁</option>
+		</select>
+		<br />
+		自我介绍：
+		<textarea style="resize: none;" cols="30" rows="5"></textarea>
+	</body>
+</html>

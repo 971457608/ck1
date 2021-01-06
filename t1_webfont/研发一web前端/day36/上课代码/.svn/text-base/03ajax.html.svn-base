@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../day34/上课代码/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function(){
+				$(".btn").click(function(){
+					$.ajax({
+						type:"get",
+						url:"json/pc-code.json",
+						async:true,
+						dataType:"json",
+						success:function(res){
+							console.log(res);
+							$(res).each(function(idx,item){
+								if(idx==1){
+									console.log(item.name);
+								}
+							})
+						},
+						error:function(){
+							console.log("请求失败");
+						}
+					});
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<button class="btn">按钮</button>
+		<p class="p1"></p>
+	</body>
+</html>

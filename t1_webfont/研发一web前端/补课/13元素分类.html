@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			p{
+				width: 50px;
+				height: 50px;
+				background: blue;
+				display: block;/*块状元素*/
+				/*display: inline;*//*内联元素*/
+				/*display: inline-block;*//*行内块元素*/
+				/*float: left;*//*当元素设置了float属性后，就相当于给该元素加了display:block;属性；*/
+				/*display: none;*//*隐藏*/
+				margin: 10px;
+				padding: 20px;
+				border: solid 10px red;
+			}
+			h3{
+				clear: both;
+			}
+			span{
+				background: red;
+				width: 80px;
+				height: 40px;
+				padding: 20px;
+				margin: 20px;
+				display: inline-block;
+				border: solid 10px blue;
+			}
+			img{
+				width: 50px;
+				margin: 10px;
+				padding: 20px;
+				border: solid 10px red;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>1.块状元素：块状元素会按顺序自上而下排列，定义自己的宽度和高度</h3>
+		<p>fsdd</p>
+		<p>的方法都是</p>
+		<h3>2.内联元素(a,span,b,i,em,strong,font)：按顺序从左往右排列，不可以定义自己的宽度和高度</h3>
+		<span>就会加快</span>
+		<span>就会加快</span>
+		<h3>3.行内块元素(img,input)：按顺序从左往右排列，可以定义自己的宽度和高度</h3>
+		<img src="img/x2.png" />
+		<img src="img/x2.png" />
+	</body>
+</html>

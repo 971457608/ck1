@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.list{
+				width: 400px;
+				border: solid 1px black;
+				text-align: center;
+				list-style: none;
+				padding: 0px 15px 15px;
+				margin: 0px auto;
+			}
+			.list li{
+				height: 40px;
+				margin-top: 15px;
+				line-height: 40px;
+			}
+			.list label{
+				width: 40%;
+				float: left;
+			}
+			.list input{
+				width: 60%;
+				height: 40px;
+				float: left;
+				outline: medium;
+				text-indent: 16px;
+			}
+			#yzm{
+				width: 30%;
+			}
+			#num{
+				float: right;
+				height: 40px;
+				border: solid 1px #999;
+				width: 25%;
+			}
+			#btn2{
+				margin-left: 20%;
+				text-indent: 0px;
+			}
+		</style>
+		<script type="text/javascript">
+			//1、将下面的字符串str的敏感字符*用空字符串””替换; (要正确表示*得转义成:\*) 
+//			var str = "H e  l  ** l    o    Wo r         L d  !";
+//			var str1 = str.replace(/\*/g,"");
+//			var str2 = str1.replace(/ /g,"");
+//			console.log(str2);//"HelloWorLd!"
+			
+			//2.将字符串str = “When I was young, I love a girl in neighbor class.”中,从young提取到girl。但是不许数[young,girl],”young, I love a girl”
+//			var a1 = "young";
+//			var a2 = "girl";
+//			var str = "When I was young, I love a girl in neighbor class";
+//			var n1 = str.indexOf(a1);
+//			var n2 = str.indexOf(a2);
+//			console.log(str.substring(n1,n2+a2.length));
+
+			//3.点击button 启动定时器,每一秒给它换一次颜色(颜色随机)
+			window.onload = function(){
+				var box = document.getElementById("box");
+				var btn = document.getElementById("btn");
+				btn.onclick = function(){
+					setInterval(function(){
+						box.style.background = "rgb("+Math.round(Math.random()*255)+","+Math.round(Math.random()*255)+","+Math.round(Math.random()*255)+")";
+					},1000)
+				}
+				
+//				4.完成一个注册页面：
+//				功能：填写用户名，密码，确认密码，验证码，完成注册
+//				要求：
+//				1、用户名不可以用数字开头，不能为空，用户名长度不低于6，不高于20
+//				2、密码不能为空
+//				3、两次填写密码必需一致才能提交
+//				4、随机生成验证码，如： 4YT8，验证码要有切换功能，能忽略大小写
+//				5、数据合法，点击提交才可以正确提交表单数据
+				var btn2 = document.getElementById("btn2");
+				var usename = document.getElementById("usename");
+				var psw1 = document.getElementById("psw1");
+				var psw2 = document.getElementById("psw2");
+				var yzm = document.getElementById("yzm");
+				var num = document.getElementById("num");
+				//验证码
+				var arr = [
+					{
+						name:"x1",
+						number1:"sb6qn"
+					},
+					{
+						name:"x2",
+						number1:"865301"
+					},
+					{
+						name:"x3",
+						number1:"etu4"
+					}
+				];
+				var b1 = Math.floor(Math.random()*arr.length);
+				num.src = "images/"+arr[b1].name+".jpg";
+				function fn(n1){
+					var b2 = Math.floor(Math.random()*arr.length);
+					return b2==b1?fn(b1):b1=b2;
+				}
+				//点击按验证切换
+				num.onclick = function(){
+					num.src = "images/"+arr[fn(b1)].name+".jpg";
+					
+				}
+				//随机生成一个验证码
+				function myimg(){
+					
+				}
+				btn2.onclick = function(){
+					//用户名
+					var re1 = /[a-zA-Z][a-zA-Z0-9]{5,19}/;
+					if(re1.test(usename.value)==false){
+						alert("用户名不可以用数字开头，不能为空，用户名长度不低于6，不高于20");
+					}
+					//验证密码
+					if(psw1.value!=psw2.value ||psw1.value.length<1){
+						alert("密码不能为空,两次填写密码必需一致才能提交");
+					}
+					//验证码
+					if(yzm.value.toLowerCase()!=arr[b1].number1){
+						alert("验证码错误");
+					}
+					
+					if(yzm.value.toLowerCase()==arr[b1].number1 && (psw1.value==psw2.value &&psw1.value.length>1) && re1.test(usename.value)){
+						alert("验证通过！")
+					}else{
+						//return false;
+					}
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+		<button id="btn">按钮</button>
+		<form name="myform" method="get" action="#">
+			<ul class="list">
+				<li>
+					<label for="usename">用户名：</label>
+					<input type="text" id="usename" placeholder="请填写用户名" />
+				</li>
+				<li>
+					<label for="psw1">密码：</label>
+					<input type="password" id="psw1" placeholder="请输入密码" />
+				</li>
+				<li>
+					<label for="psw2">再次输入密码：</label>
+					<input type="password" id="psw2" placeholder="请输入密码" />
+				</li>
+				<li>
+					<label for="yzm">验证码：</label>
+					<input type="text" id="yzm" placeholder="请输入验证码" />
+					<img id="num" src="images/x1.jpg" />
+				</li>
+				<li>
+					<input id="btn2" type="submit" />
+				</li>
+			</ul>
+		</form>
+	</body>
+</html>

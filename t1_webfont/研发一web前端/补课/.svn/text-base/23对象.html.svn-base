@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var obj = new Object();
+			obj.name="zhangsan";
+			obj.age=18;
+			obj.fn = function(){
+				console.log(1);
+			}
+			
+			console.log(obj.name);
+			console.log(obj["age"]);
+			obj.fn();
+			var obj1 = {
+				name:"lisi",
+				age:18,
+				fn:function(){
+					console.log(2);
+				},
+				obj2:{
+					name:"wangwu",
+					age:28
+				}
+			};
+			obj1.fn();
+			
+			//使用 delete 删除对象属性 
+			delete obj1.obj2.name;
+			console.log(obj1.obj2.name);
+			
+			//当前日期
+			var d = new Date();
+			
+//			var d = new Date(1608635984021);
+			//1、set / getDate()	   从Date对象中返回一个月中的某一天(1~31)
+			//var d1 = d.setDate(10);
+			
+			//2、getDay()      从Date对象返回一周中的某一天(0~6),0表示星期天
+			//var d1 = d.getDay();
+			
+			//3、set / getMonth()    从Date对象中返回月份(0~11)，0表示一月份
+			//var d1 = d.getMonth();
+			
+			//4、set / getFullYear()	从Date对象以四位数返回年份
+			//var d1 = d.getFullYear();
+			
+			//5、set / getHours()	             返回Date对象的小时(0~23)
+			//var d1 = d.getHours();
+			
+			//6、set / getMinutes()	返回Date对象的分钟(0~59)
+//			var d1 = d.getMinutes();
+			
+			//7、set / getSeconds()	返回Date对象的秒数(0~59)
+			//var d1 = d.getSeconds();
+			
+			//8、set / getMilliseconds()    返回Date对象的毫秒
+			//var d1 = d.getMilliseconds();
+			
+			//9、toString()	  把Date对象转换为字符串
+//			var d1 = d.toString();
+//			console.log( d);
+//			var c1 =10;
+//			var d1 = c1.toString();
+			
+			//10、valueOf()   返回Date对象的原始值
+			var d1 = d.valueOf();
+			
+			console.log( d1);
+			console.log(new Date(1000));
+			
+			//定时器
+			setInterval(function(){
+				console.log("a");
+			},1000)
+			setInterval(fb1,1000);
+			function fb1(){
+				console.log("b");
+			}
+			var timer = setInterval("console.log('c')",1000);
+			clearInterval(timer);
+			
+			//延时器
+			setTimeout(function(){
+				alert("a1");
+			},5000)
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body .icon-dianzan2{
+				font-size: 50px;
+				position: fixed;
+				top: 300px;
+				left: 50%;
+				margin-left: -25px;
+				cursor: pointer;
+			}
+		</style>
+		<link rel="stylesheet" href="icon/iconfont.css" />
+		<script src="../../day34/上课代码/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".dz").click(function(){
+					var s1 = $("<span class='icon iconfont icon-dianzan2 '></span>");
+					s1.css({"color":"rgb("+Math.round(Math.random()*255)+","+Math.round(Math.random()*255)+","+Math.round(Math.random()*255)+")"});
+					s1.appendTo($("body"));
+					var x = $(".dz").position().left;
+					var y = $(".dz").position().top;
+					s1.animate({
+						left:x-30,
+						top:y-100
+					},300,"linear",function(){
+						s1.animate({
+							left:x+30,
+						    top:y-200,
+						    opacity:0
+						},300,"linear",function(){
+							s1.remove();
+						})
+					})
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<span class="icon iconfont icon-dianzan2 dz"></span>
+	</body>
+</html>

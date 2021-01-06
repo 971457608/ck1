@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				width: 16px;
+				height: 18px;
+				background: url(img/toolbars.png) no-repeat -96px -212px;
+			}
+			.box2{
+				width: 120px;
+				height: 55px;
+				background: url(img/toolbars.png) no-repeat -220px 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</body>
+</html>

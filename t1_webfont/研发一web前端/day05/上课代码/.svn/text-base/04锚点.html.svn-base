@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/*ps:块状元素宽度默认为100%*/
+			.box1{
+				height: 1000px;
+				background: goldenrod;
+			}
+			.box2{
+				height: 1000px;
+				background: powderblue;
+			}
+			.box3{
+				height: 1000px;
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<a href="#box1">顶部</a>
+			<a href="#box2">中间</a>
+			<a href="#box3">尾部</a>
+		</div>
+		<div id="box1" class="box1">顶部</div>
+		<div id="box2" class="box2">中间</div>
+		<div id="box3" class="box3">尾部</div>
+	</body>
+</html>

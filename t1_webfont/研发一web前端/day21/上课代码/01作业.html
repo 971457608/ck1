@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#box{
+				width: 300px;
+				height: 150px;
+				background: palevioletred;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var box = document.getElementById("box");
+				var i=5;
+				var timer = setInterval(function(){
+					i--;
+					if(i==0){
+						clearInterval(timer);
+						box.style.display="none";
+					}
+					box.innerHTML = "我是一条广告，"+i+"秒后自动关闭"
+				},1000)
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">我是一条广告，5秒后自动关闭</div>
+	</body>
+</html>

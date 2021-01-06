@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload =function(){
+				var btn = document.querySelector(".btn");
+				btn.onclick = function(e){
+					var e = e||event;
+					console.log("anniu被点击了");
+					//1, 取消冒泡
+				     e.cancelBubble = true;
+				
+					//2, 停止传播
+				     e.stopPropagation();
+
+				}
+				document.onclick = function(){
+					console.log("文档被点击了");
+				}
+				
+				document.oncontextmenu = function(e){
+					var e = e||event;
+					console.log(e.button);
+					return false;
+				}
+				
+				//超链接<a>的拦截
+				var a1 = document.querySelector(".a1");
+				var v1  = document.querySelector("input");
+				a1.onclick = function(){
+//					if(v1.value!="12345"){
+//						return false;
+//					}
+					if(v1.value=="12345"){
+						a1.href="https://www.baidu.com"
+					}
+				}
+				
+				
+
+			}
+			
+		</script>
+	</head>
+	<body>
+		<button class="btn">anniu</button>
+		<input type="text" />
+		<a class="a1" href="#">百度</a>
+	</body>
+</html>

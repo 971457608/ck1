@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title></title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body>
+		<div class="box1">
+			<div class="hd0">
+				<img src="img/a1.jpg" />
+				<img src="img/ia_100000005.png" />
+				<img src="img/a2.jpg" />
+			</div>
+			<div class="hd">
+				<img class="logo" src="img/ia_100000004.png" />
+				<div class="nav">
+					<a href="#">首页</a>
+					<a href="#">商店</a>
+					<a href="#">关于</a>
+					<a href="#">联系</a>
+				</div>
+				<ul class="list">
+					<li>
+						<img src="img/a1.jpg" />
+					</li>
+					<li>
+						<img src="img/a2.jpg" />
+						<div class="car">
+							<p>购物车里没有商品</p>
+							<hr />
+						</div>
+					</li>
+				</ul>
+			</div>
+			<h3 class="oh3">拎出来的优雅，丢不了的自信</h3>
+			<a class="a1" href="#">立即购买</a>
+		</div>
+		<div class="box2">
+			<div class="box2-con">
+				<h3>A leather goods brand that inspires elegance in everyday life. Proudly made in Montréal since 1987.</h3>
+				<p>一款优质的包包是高雅品位的象征，足以点缀一个女人的雅致生活。包身以闪亮金属和独特的拉链设计相辅相成，搭配包身显得非常个性，超具视觉冲击力，透着清雅悠闲的气息，绝对让人过目不忘。在这里，您仅需花上10分钟便可以完成一个H5响应式网站，您会发现完全不需要编写一行代码，这就是起飞页自助建站的神奇之处。</p>
+				<a href="#">阅读更多</a>
+			</div>
+		</div>
+		<div class="box3">
+			<div class="box31">
+				<img src="img/ia_100000006.jpg" />
+				<div class="box3-con">
+					<h3>新款简约</h3>
+					<a href="#">立即购买</a>
+				</div>
+			</div>
+			<div class="box32">
+				<img src="img/ia_100000007.jpg" />
+				<div class="box3-con">
+					<h3>新款简约</h3>
+					<a href="#">立即购买</a>
+				</div>
+			</div>
+			<div class="box33">
+				<img src="img/ia_100000008.jpg" />
+				<div class="box3-con">
+					<h3>新款简约</h3>
+					<a href="#">立即购买</a>
+				</div>
+			</div>
+		</div>
+		<div class="box3 box4">
+			<div class="box31">
+				<img src="img/ia_100000009.jpg" />
+				<div class="box3-con">
+					<h3>新款简约</h3>
+					<a href="#">立即购买</a>
+				</div>
+			</div>
+			<div class="box32">
+				<img src="img/ia_100000010.jpg" />
+				<div class="box3-con">
+					<h3>新款简约</h3>
+					<a href="#">立即购买</a>
+				</div>
+			</div>
+			<div class="box33">
+				<img src="img/ia_100000011.jpg" />
+				<div class="box3-con">
+					<h3>新款简约</h3>
+					<a href="#">立即购买</a>
+				</div>
+			</div>
+		</div>
+		<div class="box5">
+			<img src="img/ia_100000012.jpg" />
+			<div class="box5-r">
+				<h3><b>DIY</b>定制</h3>
+				<div class="line"></div>
+				<p>完全DIY定制满足您的个性化，独创需求！</p>
+				<input type="text" placeholder="预约定制" />
+				<a href="#">提交</a>
+				<p>拎出来的优雅，丢不了的自信。</p>
+			</div>
+		</div>
+		<div class="box6">
+			<div class="icon">
+				<i></i>
+				<i></i>
+				<i></i>
+			</div>
+			<div>
+				<span>服务条款</span>
+				<span>服务条款</span>
+				<span>服务条款</span>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			Math.round(3.6)     //四舍五入
+//			Math.random()          //返回0-1之间的随机数
+//			Math.max(num1, num2)  //返回较大的数
+//			Math.min(num1, num2)   //返回较小的数
+//			Math.abs(num)     //绝对值
+//			Math.ceil(19.3)     //向上取整
+//			Math.floor(11.8)    //向下取整
+			
+			var n1 = 10.4;
+			console.log(Math.round(n1));
+			console.log(Math.round(Math.random()*10));
+//			随机5-10
+			console.log(Math.round(Math.random()*5)+5);
+			var a1=10,a2=20;
+			console.log(Math.max(a1,a2));
+			console.log(Math.ceil(10.1));
+			console.log(Math.floor(10.99999));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

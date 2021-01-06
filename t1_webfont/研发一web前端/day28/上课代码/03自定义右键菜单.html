@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list{
+				width: 60px;
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				display: none;
+			}
+			.list li{
+				border: solid 1px black;
+				text-align: center;
+				line-height: 30px;
+				margin-top: -1px;
+				list-style: none;
+			}
+			.list li:hover{
+				background: black;
+				color: white;
+				cursor: pointer;
+				
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var list = document.querySelector(".list");
+				document.oncontextmenu = function(e){
+					var e = e||event;
+					list.style.top=e.clientY+"px";
+					list.style.left = e.clientX+"px";
+					list.style.display="block";
+					return false;
+				}
+				document.onclick = function(){
+					list.style.display="none";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul class="list">
+			<li>复制</li>
+			<li>粘贴</li>
+			<li>剪切</li>
+		</ul>
+	</body>
+</html>

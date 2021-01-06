@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list{
+				width: 360px;
+				margin: 50px auto;
+				background: #999;
+				padding-bottom: 15px;
+				list-style: none;
+				overflow: hidden;
+			}
+			.list li{
+				border: solid 2px #666;
+				box-sizing: border-box;
+				float: left;
+				width: 100px;
+				height: 100px;
+				padding-top: 15px;
+				margin-left: 15px;
+				margin-top: 15px;
+				background: #666;
+				text-align: center;
+				color: white;
+				font-size: 30px;
+			}
+			.list li:first-child{
+				border: solid 2px red;
+				color: red;
+				background: white;
+			}
+			.list li:last-child{
+				width: 330px;
+				height: 65px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var oli = document.querySelectorAll("li");
+				var obj = oli[0];
+				var arr=["一","二","三","四","五","六","七","八","九","十","十一","十二"];
+				for(var i=0;i<oli.length-1;i++){
+					oli[i].index = i;
+					oli[i].onclick = function(){
+//						for(var j=0;j<oli.length;j++){
+//							oli[j].style.background = "#666";
+//							oli[j].style.color = "white";
+//							oli[j].style.border = "solid 2px #666";
+//						}
+						obj.style.background = "#666";
+						obj.style.color = "white";
+						obj.style.border = "solid 2px #666";
+						this.style.background = "white";
+						this.style.color = "red";
+						this.style.border = "solid 2px red";
+						obj=this;
+						oli[12].innerHTML =arr[this.index]+ "月份好！"
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul class="list">
+			<li>
+				<p>1</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>2</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>3</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>4</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>5</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>6</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>7</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>8</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>9</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>10</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>11</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				<p>12</p>
+				<span>Jan</span>
+			</li>
+			<li>
+				一月份好！
+			</li>
+		</ul>
+	</body>
+</html>

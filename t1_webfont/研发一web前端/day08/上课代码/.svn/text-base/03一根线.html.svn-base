@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 100px;
+				height: 100px;
+				margin: 100px auto;
+				overflow: hidden;
+			}
+			.line{
+				height: 100px;
+				width: 1px;
+				margin: 0 auto;
+				border-left: solid 1px red;
+				position: relative;
+				top: -100px;
+				animation:myline 3s infinite;
+			}
+			@keyframes myline{
+				0%{top: -100px;}
+				100%{top: 100px;}
+			}
+			.obox{
+				width: 100px;
+				height: 100px;
+				border: solid 1px black;
+			}
+			.line{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="line"></div>
+		</div>
+		
+	</body>
+</html>

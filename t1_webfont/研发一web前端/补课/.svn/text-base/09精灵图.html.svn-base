@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box1{
+				width: 54px;
+				height: 54px;
+				border: solid 1px black;
+				background: url(img/timg.jpg) no-repeat -17px -91px;
+			}
+			.box2{
+				width: 47px;
+				height: 47px;
+				border: solid 1px black;
+				background: url(img/timg.jpg) no-repeat -262px -94px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+	</body>
+</html>

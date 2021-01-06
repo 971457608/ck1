@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<table height="500" align="center" border="1" cellspacing="0">
+			<caption><h1>个人信息表</h1></caption>
+			<tr align="center">
+				<td width="122">姓名</td>
+				<td width="122"></td>
+				<td width="122">曾用名</td>
+				<td width="122"></td>
+				<td width="155" rowspan="4">照片<br/>贴老</td>
+			</tr>
+			<tr align="center">
+				<td>性别</td>
+				<td></td>
+				<td colspan="2">出生:&nbsp;&nbsp;&nbsp;&nbsp;年&nbsp;&nbsp;&nbsp;&nbsp;月&nbsp;&nbsp;&nbsp;&nbsp;日</td>
+			</tr>
+			<tr align="center">
+				<td>民族</td>
+				<td></td>
+				<td>政治面貌</td>
+				<td></td>
+			</tr>
+			<tr align="center">
+				<td>户口所在地</td>
+				<td colspan="3"></td>
+			</tr>
+			<tr align="center">
+				<td>职务</td>
+				<td></td>
+				<td>身份证号码</td>
+				<td colspan="2"></td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">工作单位</td>
+				<td rowspan="2" colspan="3"></td>
+				<td align="left">邮编：</td>
+			</tr>
+			<tr align="center">
+				<td align="left">电话：</td>
+			</tr>
+			<tr align="center">
+				<td rowspan="2">家庭地址</td>
+				<td rowspan="2" colspan="3"></td>
+				<td align="left">邮编：</td>
+			</tr>
+			<tr align="center">
+				<td align="left">电话：</td>
+			</tr>
+		</table>
+	</body>
+</html>

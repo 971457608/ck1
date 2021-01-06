@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #f5f5f5;
+			}
+			.obox{
+				width: 400px;
+				height: 400px;
+				border: solid 1px black;
+				margin: 100px auto;
+				position: relative;
+			}
+			.imgbox{
+				position: relative;
+				height: 100%;
+			}
+			.imgbox img{
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				width: 100%;
+				height: 100%;
+				display: block;
+				opacity: 0;
+				transition: all 0.5s; 
+			}
+			.imgbox img:first-child{
+				opacity: 1;
+			}
+			.prev{
+				height: 24px;
+				position: absolute;
+				top: 50%;
+				left: 0px;
+				margin-top: -12px;
+			}
+			.next{
+				height: 24px;
+				position: absolute;
+				top: 50%;
+				right: 0px;
+				margin-top: -12px;
+			}
+			.list{
+				position: absolute;
+				bottom: 10px;
+				width: 100%;
+				text-align: center;
+				font-size: 0;
+			}
+			.list li{
+				display: inline-block;
+				list-style: none;
+				width: 10px;
+				height: 10px;
+				border: solid 1px rgba(0,0,0,0.05);
+				border-radius: 100%;
+				background: rgba(255,255,255,0.4);
+				margin: 0px 2px;
+				cursor: pointer;
+			}
+			.list li:first-child{
+				background: rgba(255,255,255,1);
+				border: solid 1px rgba(0,0,0,0.1);
+			}
+		</style>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded",function(){
+				var obox = document.querySelector(".obox");
+				var prev = document.querySelector(".prev");
+				var imgbox = document.querySelector(".imgbox");
+				var oimg = imgbox.querySelectorAll("img");
+				var next = document.querySelector(".next");
+				var list = document.querySelector(".list");
+				var oli = list.querySelectorAll("li");
+				var i=0;
+				var timer = setInterval(banner,1000);
+				var obj = oimg[0];
+				var obj2 = oli[0];
+				function banner(){
+					i++;
+					if(i==oimg.length){
+						i=0;
+					}
+					fn();
+				}
+				function fn(){
+					obj.style.opacity = 0;
+					oimg[i].style.opacity = 1;
+					obj = oimg[i];
+					icon();
+				}
+				function icon(){
+					obj2.style.background = "rgba(255,255,255,0.4)";
+					obj2.style.border = "solid 1px rgba(0,0,0,0.05)";
+					oli[i].style.background = "rgba(255,255,255,1)";
+					oli[i].style.border = "solid 1px rgba(0,0,0,0.1)";
+					obj2 = oli[i];
+				}
+				
+				obox.onmouseenter = function(){
+					clearInterval(timer);
+				}
+				obox.onmouseleave = function(){
+					timer = setInterval(banner,1000);
+				}
+				//下一张
+				next.onclick = function(){
+					banner();
+				}
+				//上一张
+				prev.onclick = function(){
+					i--;
+					if(i<0){
+						i=oimg.length-1;
+					}
+					fn();
+				}
+				
+				//鼠标移入小圆圈
+				for(var j=0;j<oli.length;j++){
+					oli[j].index = j;
+					oli[j].onmouseenter = function(){
+						i=this.index;
+						fn();
+					}
+				}
+			})
+		</script>
+	</head>
+	<body>
+		<div class="obox">
+			<div class="imgbox">
+				<img src="../../day09/上课代码/品牌创意/img/ia_100000002.jpg" />
+				<img src="../../day09/上课代码/品牌创意/img/ia_100000001.jpg" />
+				<img src="../../day09/上课代码/品牌创意/img/ia_100000003.jpg" />
+				<img src="../../day09/上课代码/品牌创意/img/ia_100000004.jpg" />
+				<img src="../../day09/上课代码/品牌创意/img/ia_100000005.jpg" />
+				<img src="../../day09/上课代码/品牌创意/img/ia_100000006.jpg" />
+				<img src="../../day09/上课代码/品牌创意/img/ia_100000007.jpg" />
+				<img src="../../day09/上课代码/品牌创意/img/ia_100000008.jpg" />
+			</div>
+			<button class="prev">上一张</button>
+			<button class="next">下一张</button>
+			<ul class="list">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+</html>

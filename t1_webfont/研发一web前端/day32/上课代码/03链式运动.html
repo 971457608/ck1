@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 100px;
+				height: 100px;
+				position: fixed;
+				top: 40px;
+				left: 0px;
+				background: red;
+			}
+		</style>
+		<script src="move.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded",function(){
+				var btn = document.querySelector(".btn");
+				var box = document.querySelector(".box");
+				btn.onclick = function(){
+					move(box,"left",500,30,function(){
+						move(box,"top",500,30,function(){
+							move(box,"left",0,30,function(){
+								move(box,"top",40,30)
+							})
+						});
+					});
+				}
+			})
+		</script>
+	</head>
+	<body>
+		<button class="btn">运动</button>
+		<div class="box"></div>
+	</body>
+</html>

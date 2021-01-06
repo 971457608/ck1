@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.active{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				width: 10px;
+				height: 10px;
+				background: black;
+				border-radius: 100%;
+			}
+		</style>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded",function(){
+//				var arr = [];
+				var timer ;
+				document.onmousedown = function(){
+//					clearInterval(timer);
+//					arr.length=0;
+					var arr = [];
+					document.onmousemove = function(e){
+						var e = e||event;
+						var obj = {
+							top:e.clientY,
+							left:e.clientX
+						}
+						arr.push(obj);
+					}
+					document.onmouseup = function(){
+						document.onmousemove=null;
+						document.onmouseup=null;
+						var i=0;
+						var timer = setInterval(function(){
+							var box = document.createElement("div");
+							box.className="active";
+							box.style.top=arr[i].top+"px";
+							box.style.left=arr[i].left+"px";
+							document.body.appendChild(box);
+							i++;
+							if(i==arr.length){
+								clearInterval(timer);
+							}
+						},30);
+					}
+				}
+			})
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

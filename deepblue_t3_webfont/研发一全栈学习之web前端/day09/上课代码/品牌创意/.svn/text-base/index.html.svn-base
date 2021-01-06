@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>品牌创意</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<img class="logo" src="img/ia_100000000.png" />
+		<p class="p1">OC&OC品牌创意</p>
+		<h3 class="oh3">我们是来自纽约的一家创意公司</h3>
+		<p class="p2">倒影看起来就像是一幅油画，两个世界就此碰撞在一起。你会禁不住思考这张照片是在哪里、以何种方式拍摄的。角落中飞翔的小鸟为这个超现实主义的构图带来了唯一的生命迹象你不必大费周章赶到冰岛，美景就在你的眼前。交错的线条、充满生机的色彩，以及新旧交替的感觉，这真是一幅佳作</p>
+		<ul class="list">
+			<li>
+				<img src="img/ia_100000001.jpg" />
+				<h3>品牌项目名称一</h3>
+				<span>这里是自定义文字区域可自行修改</span>
+			</li>
+			<li>
+				<img src="img/ia_100000002.jpg" />
+				<h3>品牌项目名称一</h3>
+				<span>这里是自定义文字区域可自行修改</span>
+			</li>
+			<li>
+				<img src="img/ia_100000003.jpg" />
+				<h3>品牌项目名称一</h3>
+				<span>这里是自定义文字区域可自行修改</span>
+			</li>
+			<li>
+				<img src="img/ia_100000004.jpg" />
+				<h3>品牌项目名称一</h3>
+				<span>这里是自定义文字区域可自行修改</span>
+			</li>
+			<li>
+				<img src="img/ia_100000005.jpg" />
+				<h3>品牌项目名称一</h3>
+				<span>这里是自定义文字区域可自行修改</span>
+			</li>
+			<li>
+				<img src="img/ia_100000006.jpg" />
+				<h3>品牌项目名称一</h3>
+				<span>这里是自定义文字区域可自行修改</span>
+			</li>
+			<li>
+				<img src="img/ia_100000007.jpg" />
+				<h3>品牌项目名称一</h3>
+				<span>这里是自定义文字区域可自行修改</span>
+			</li>
+			<li>
+				<img src="img/ia_100000008.jpg" />
+				<h3>品牌项目名称一</h3>
+				<span>这里是自定义文字区域可自行修改</span>
+			</li>
+			<li>
+				<img src="img/ia_100000009.jpg" />
+				<h3>品牌项目名称一</h3>
+				<span>这里是自定义文字区域可自行修改</span>
+			</li>
+		</ul>
+		<img class="logo logo2" src="img/ia_100000000.png" />
+		<div class="box1">
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+			<i></i>
+		</div>
+		<p class="p3">上海松江佘山林荫大道18号天虹大厦北区16F-501 | 版权所有 © 2016  公司网站模板</p>
+		<p class="p3 p4">OC&OC营销策划</p>
+	</body>
+</html>

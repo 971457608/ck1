@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*p{
+				color: red;
+			}*/
+			.s1{
+				color: blue;
+			}
+			#i1{
+				color: red;
+			}
+			*{
+				font-family: "宋体";
+			}
+			/*.em1{
+				font-size: 16px;
+				color: red;
+				background-color: pink;
+				font-weight: 900;
+			}
+			#u1{
+				font-size: 16px;
+				color: red;
+				background-color: gold;
+				font-weight: 900;
+			}*/
+			.em1,#u1{
+				font-size: 16px;
+				color: red;
+				background-color: gold;
+				font-weight: 900;
+			}
+			.em1{
+				background-color: pink;
+			}
+			/*.obox a{
+				background-color: brown;
+			}*/
+			.obox>a{
+				background-color: brown;
+			}
+			
+			/*初始状态*/
+			.a1:link{
+				color: red;
+			}
+			
+			/*被访问后的状态*/
+			.a1:visited{
+				color: black;
+			}
+			
+			/*鼠标移动到标签上状态*/
+			.a1:hover{
+				font-size: 30px;
+			}
+			
+			/*鼠标按下的状态*/
+			.a1:active{
+				font-size: 50px;
+			}
+			
+		
+			/*鼠标移动到标签上状态*/
+			.p1:hover{
+				font-size: 30px;
+			}
+			
+			/*鼠标按下的状态*/
+			.p1:active{
+				font-size: 50px;
+			}
+			
+			/*.list1 li:nth-child(5){
+				color: red;
+			}*/
+			
+			/*2n偶数*/
+			/*2n+1 奇数*/
+			/*n+2  大于等于2*/
+			/*-n+2 小于等于2*/
+			.list1 li:nth-child(-n+2){
+				color: red;
+			}
+			
+			.box1 p:nth-child(3){
+				background-color: gold;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>1.类型选择器</h3>
+		<p>婚纱德国汉莎的感觉哈斯夺冠就杀掉国际化</p>
+		<h3>2.类选择符(一个标签可以有多个类名，类名可以重复)</h3>
+		<span class="s1">是顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶</span>
+		<span class="s1 s2">反反复复烦烦烦烦烦烦烦烦烦烦烦烦烦烦烦</span>
+		<b class="s1">撒大啊啊啊啊啊啊阿萨打撒打撒打撒打撒</b>
+		<h3>3.ID选择符(id是唯一得且一个标签只能有一个id名)</h3>
+		<i id="i1">大飒飒飒飒飒飒飒飒飒飒飒飒飒飒飒飒飒飒撒</i>
+		<i id="i2">大飒飒飒飒飒飒飒飒飒飒飒飒飒飒飒飒飒飒撒</i>
+		<h3>4.通配符</h3>
+		<h3>5.群组选择符</h3>
+		<em class="em1">分顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶</em>
+		<u id="u1">分顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶</u>
+		<h3>6.后代选择符</h3>
+		<div class="obox">
+			<h1>
+				<a href="#">百度</a>
+			</h1>
+			<a href="#">taobao</a>
+		</div>	
+		<h3>7.子选择符</h3>
+		<h3>8.伪类选择符</h3>
+		<a href="#" class="a1"><h1>hello word</h1></a>
+		<p class="p1">发的哥哥哥哥哥哥哥哥哥哥哥哥哥哥哥哥哥</p>
+		<h3>9.nth-child</h3>
+		<ul class="list1">
+			<li>1列表内容</li>
+			<li>2列表内容</li>
+			<li>3列表内容</li>
+			<li>4列表内容</li>
+			<li>5列表内容</li>
+		</ul>
+		<div class="box1">
+			<p>hshdhs</p>
+			<p>hshdhs</p>
+			<span>hshdhs</span>
+			<p>hshdhs</p>
+			<p>hshdhs</p>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#p1{
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+		<script>
+			window.onload = function(){
+				var p1 = document.getElementById("p1");
+				p1.style.color = "red";
+				p1.style.background = "gold";
+				p1.style.fontSize = "30px";
+				var a1 = 200;
+				var a2 =2;
+				setInterval(function(){
+					a1+=a2;
+					p1.style.width = a1+"px";
+					p1.style.height = a1+"px";
+					if(a1==400||a1==200){
+						a2*=-1;
+					}
+				},10)
+			}
+			
+		</script>
+	</head>
+	<body>
+		<p id="p1">回复几个的回复的感受就</p>
+	</body>
+</html>

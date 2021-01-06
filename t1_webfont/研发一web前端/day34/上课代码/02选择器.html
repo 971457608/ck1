@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input:focus{
+				background: blue;
+			}
+		</style>
+		<script src="js/jquery-1.12.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//简写
+			$(function(){
+				$(".btn").click(function(){
+					//根据给定的ID匹配一个元素。
+					$("#p1").css("color","blue");
+					
+					//根据给定的元素名匹配所有元素
+					$("span").css("font-size","30px");
+					
+					//根据给定的类匹配元素。
+					$(".b1").css("background","brown")
+					
+					//*匹配所有元素
+					//群组选择符
+					$(".b1,.p2").css("color","red");
+				})
+				//在给定的祖先元素下匹配所有的后代元素
+				$(".list1 li").css("color","red");
+				
+				//子选择符
+				$(".box>a").css("color","black")
+				
+				//匹配所有紧接在 prev 元素后的 next 元素
+				$(".oli2+li").css("background","#0086B3");
+//				$(".op2+h3").css("background","#0086B3");
+				
+				//匹配 prev 元素之后的所有 siblings 元素
+				$(".op2~p").css("background","#0086B3");
+				
+				//去除所有与给定选择器匹配的元素
+				$(".list2 li:not(.oli3)").css("color","blue");
+				
+				//匹配所有大于给定索引值的元素
+				$(".list2 li:gt(1)").css("background","red");
+				
+				//匹配所有小于给定索引值的元素
+				$(".list2 li:lt(2)").css("background","olive");
+				
+				$("[name=mytext]").css("width","300px");
+			
+				//匹配其父元素下的第N个子或奇偶元素
+				$(".list1 li:nth-child(-n+2)").css("font-size","30px");
+			})
+		</script>
+	</head>
+	<body>
+		<button class="btn">按钮</button>
+		<p id="p1">fsdfdsfdf</p>
+		<span>打发打发1</span>
+		<span>打发打发2</span>
+		<span>打发打发3</span>
+		<b class="b1">广泛大概豆腐干</b>
+		<p class="p2">梵蒂冈士大夫士大夫</p>
+		<ul class="list1">
+			<li>列表内容同</li>
+			<li class="oli2">列表内容同</li>
+			<li>列表内容同</li>
+			<li>列表内容同</li>
+		</ul>
+		<ul class="list2">
+			<li>列表内容同</li>
+			<li>列表内容同</li>
+			<li class="oli3">列表内容同</li>
+			<li>列表内容同</li>
+		</ul>
+		<div class="box">
+			<a href="#">百度</a>
+			<h1>
+				<a href="#">淘宝</a>
+			</h1>
+		</div>
+		<div class="box2">
+			<p>翻跟斗广泛的给</p>
+			<p class="op2">翻跟斗广泛的给</p>
+			<h3>反对士大夫大师傅</h3>
+			<p>翻跟斗广泛的给</p>
+			<p>翻跟斗广泛的给</p>
+			<p>翻跟斗广泛的给</p>
+		</div>
+		<input name="mytext" class="v1" type="text" />
+	</body>
+</html>

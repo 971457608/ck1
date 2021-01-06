@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title></title>
+		<link type="text/css" href="css/fullpage.min.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+		<script type="text/javascript" src="js/fullpage.js" ></script>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<ul id="myMenu">
+		    <li data-menuanchor="firstPage" title="证券时报网" class="active"><a href="#firstPage"><span>证券时报网</span><b></b></a></li>
+		    <li data-menuanchor="secondPage" title="证券时报网"><a href="#secondPage"><span>财院社区</span><b></b></a></li>
+		    <li data-menuanchor="thirdPage" title="证券时报网"><a href="#thirdPage"><span>爱故快信</span><b></b></a></li>
+		    <li data-menuanchor="fourthPage" title="证券时报网"><a href="#fourthPage"><span>股票情报</span><b></b></a></li>
+		    <li data-menuanchor="lastPage" title="证券时报网"><a href="#lastPage"><span>新股助手</span><b></b></a></li>
+		</ul>
+		<div id="fullpage">
+			<div class="section section1">
+				<div class="hd"></div>
+				<img class="img-c" src="img/ia_100000006.png" />
+				<img class="img-l" src="img/ia_100000008.png" />
+				<img class="img-r" src="img/ia_100000009.png" />
+				<a class="next-btn" href="#secondPage">
+					<img src="img/ia_100000042.png" />
+				</a>
+				<img class="lastimg" src="img/ia_100000049.png" />
+			</div>
+			<div class="section section2">
+				<div class="hd"></div>
+				<img class="wx" src="img/ia_100000013.png" />
+				<div class="box2-l">
+					<img class="img-l" src="img/ia_100000015.png" />
+					<img class="img2" src="img/ia_100000016.png" />
+					<img class="img3" src="img/ia_100000017.png" />
+					<div class="hand-box">
+						<img src="img/ia_100000019.png" />
+						<img class="hand" src="img/ia_100000020.png" />
+					</div>
+				</div>
+				<img class="img-r" src="img/ia_100000018.png" />
+				<a class="next-btn" href="#thirdPage">
+					<img src="img/ia_100000042.png" />
+				</a>
+				<img class="lastimg" src="img/ia_100000049.png" />
+			</div>
+			<div class="section section3">
+				<div class="hd"></div>
+				<img class="img1" src="img/ia_100000024.png" />
+				<img class="img2" src="img/ia_100000025.png" />
+				<img class="img3" src="img/ia_100000027.png" />
+				<img class="img4" src="img/ia_100000028.png" />
+				<a class="next-btn" href="#fourthPage">
+					<img src="img/ia_100000042.png" />
+				</a>
+				<img class="lastimg" src="img/ia_100000049.png" />
+			</div>
+			<div class="section section4">
+				<div class="hd"></div>
+				<div class="box1">
+					<img class="img1" src="img/ia_100000033.png/" />
+					<img class="img2" src="img/ia_100000034.png/" />
+					<img class="img3" src="img/ia_100000035.png/" />
+					<img class="img5" src="img/ia_100000036.png/" />
+					<img class="img4" src="img/ia_100000037.png/" />
+					<img class="img6" src="img/ia_100000039.png/" />
+					<img class="img7" src="img/ia_100000038.png/" />
+				</div>
+				<img class="img-r" src="img/ia_100000040.png" />
+				<a class="next-btn" href="#lastPage">
+					<img src="img/ia_100000042.png" />
+				</a>
+				<img class="lastimg" src="img/ia_100000049.png" />
+			</div>
+			<div class="section section5">
+				<div class="hd"></div>
+				<div class="box1">
+					<img src="img/ia_100000044.png" />
+					<img src="img/ia_100000044.png" />
+				</div>
+				<img class="img2" src="img/ia_100000045.png" />
+				<img class="img3" src="img/ia_100000047.png" />
+				<img class="img4" src="img/ia_100000048.png" />
+				<img class="lastimg" src="img/ia_100000049.png" />
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$('#fullpage').fullpage({
+				anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+    			menu: '#myMenu',
+    			scrollingSpeed: 1000,
+			});
+		})
+	</script>
+</html>

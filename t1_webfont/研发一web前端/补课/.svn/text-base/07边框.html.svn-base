@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				border: solid 10px black;
+			}
+			.box1{
+				width: 200px;
+				height: 200px;
+				border-top: solid 10px blue;
+				border-right: dashed 10px red;
+				border-bottom:double 10px blue;
+				border-left: groove 10px red;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box1"></div>
+	</body>
+</html>

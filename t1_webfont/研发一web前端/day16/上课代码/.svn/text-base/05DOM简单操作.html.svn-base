@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//文档加载完毕后才执行
+			window.onload = function(){
+				//获取元素节点
+				var btn = document.getElementById("btn");
+				var v1 = document.getElementById("v1");
+				var oh3 = document.getElementById("oh3");
+				console.log(btn);
+				
+				//绑定点击事件
+				btn.onclick = function(){
+					//console.log("按钮被点击了");
+					//获取文本框的值,value（表单控件用value）
+					console.log(v1.value);
+					//修改文本框的值
+					//btn.value="123";
+					
+					//获取其它标签的值,innerHTML
+//					console.log(oh3.innerHTML);
+//					oh3.innerHTML="hello word";
+					console.log(typeof v1.value);
+					fn(v1.value);
+				}
+				function fn(n){
+					if(n%2==0){
+						alert(n+"是偶数");
+					}else{
+						alert(n+"是奇数");
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h3 id="oh3">在输入框中输入数字, 点击按钮调用函数来判断奇偶性?</h3>
+		<input id="v1" type="text" value="这是一个文本框" />
+		<button type="button" id="btn">按钮</button>
+	</body>
+</html>

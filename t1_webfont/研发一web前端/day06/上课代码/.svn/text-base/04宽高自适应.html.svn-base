@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				height: 100%;
+			}
+			.img1{
+				width: 50%;
+				max-width: 300px;
+				min-width: 200px;
+				height: 10%;
+				margin: 0 auto;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>百分比单位的参照物是父元素</h3>
+		<img class="img1" src="../../day04/作业/b2.png" />
+	</body>
+</html>

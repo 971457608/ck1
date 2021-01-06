@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list{
+				list-style: none;
+				text-align: center;
+				background: #999;
+			}
+			a{
+				color: black;
+				text-decoration: none;
+			}
+			.list li{
+				width: 100px;
+				height: 50px;
+				line-height: 50px;
+				display: inline-block;
+				position: relative;
+			}
+			.list div{
+				background: #999;
+				width: 100%;
+				position: absolute;
+				top: 50px;
+				line-height: 30px;
+				left: 0px;
+				text-align: center;
+				display: none;
+				transition: all 0.5s;
+			}
+			.list div a{
+				display: block;
+			}
+			.box{
+				width: 200px;
+				height: 200px;
+				background: red;
+				display: none;
+			}
+		</style>
+		<script src="../../day34/上课代码/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$(".list li").hover(function(){
+					$(this).find("div").slideToggle();
+				})
+				
+				$(".btn").click(function(){
+					$(".box").slideToggle();
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<ul class="list">
+			<li>
+				<a href="#">网站首页</a>
+				<div>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">网站首页</a>
+				<div>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">网站首页</a>
+				<div>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">网站首页</a>
+				<div>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+				</div>
+			</li>
+			<li>
+				<a href="#">网站首页</a>
+				<div>
+					
+					<a href="#">学校概括</a>
+					<a href="#">学校概括</a>
+				</div>
+			</li>
+		</ul>
+		<button class="btn">按钮</button>
+		<div class="box"></div>
+	</body>
+</html>

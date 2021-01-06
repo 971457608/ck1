@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding:0;
+			}
+			body{
+				background: url(img/background.jpg) 0px 0px/100% 100vh;
+			}
+			.active{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				opacity: 0.5;
+			}
+		</style>
+		<script src="../../day34/上课代码/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				setInterval(function(){
+					creatimg();
+				},1000)
+				function creatimg(){
+					var img1 = $("<img />");
+					img1.attr("src","img/snowflake"+Math.ceil(Math.random()*19)+".png");
+					var w = $(window).width();
+					var h = $(window).height();
+					img1.addClass("active");
+					img1.appendTo($("body"));
+					img1.css("left",Math.round(Math.random()*(w-img1.width())));
+					img1.animate({
+						top:h-50
+					},Math.round(Math.random()*10000+5000),"linear",function(){
+						img1.remove();
+					})
+					
+				}
+			})
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onkeydown = function(e){
+				var e = e||event;
+				if(e.shiftKey){
+					console.log("按下了shift");
+				}
+				if(e.ctrlKey){
+					console.log("按下了cctrl");
+				}
+				if(e.altKey){
+					console.log("按下了alt");
+				}
+				if(e.metaKey){
+					console.log("按下了meta");
+				}
+				
+				//1. 键码 : keyCode属性
+				console.log(e.keyCode);
+				
+				//按下+shift+ctrl+c
+				if(e.ctrlKey&&e.shiftKey&&e.keyCode==67){
+					console.log("ctrl+c");
+				}
+			}
+//			window.onkeypress = function(e){
+//				//2.字符编码 : charCode属性
+//				console.log(e.charCode);
+//			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

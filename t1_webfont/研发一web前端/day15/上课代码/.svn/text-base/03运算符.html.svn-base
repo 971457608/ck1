@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var a1=10,a2=20,a3=30;
+			//算术运算符
+			var d1 = a1%a2;
+			console.log(d1);
+			++a1;
+			console.log(a1+a2);
+			
+			//关系运算符(==,<,>,>=,<=)
+			console.log(a1>a2);
+			
+			//逻辑运算符
+			console.log(!(a1>a2 || a2<a3));
+			
+			//复合赋值运算符(+=,-=,*=,/=,%=)
+			a2+=5;//a2=a2+5
+			console.log(a2);
+			
+			//1.字符串运算符+
+			var b1 = "hello";
+			//2.逗号运算符
+			var b2 = 20,b3=30;
+			console.log(b1+(b2+b3));
+			
+//			3.三元(目)条件运算符
+//		       语法：表达式1?表达式2：表达式3；
+//		        表达式1为真时，则执行表达式2，否则执行表达式3
+			b2>b3?console.log(b2+"大"):	console.log(b3+"大");
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

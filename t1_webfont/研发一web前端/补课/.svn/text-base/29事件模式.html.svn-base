@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var btn = document.querySelector(".btn");
+				btn.onclick = function(){
+					console.log(2);
+				}
+			}
+			function fn(){
+				console.log(1);
+			}
+		</script>
+	</head>
+	<body>
+		<h3>1, 内联模式,</h3>
+		<h3>2, 脚本模式。</h3>
+		<button  onclick="fn()">anniu</button>
+		<button class="btn" >anniu2</button>
+	</body>
+</html>

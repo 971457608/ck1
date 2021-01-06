@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				font-family: "宋体";
+				background: url(img/a3.jpg) fixed no-repeat 0px 0px/100% 100vh;
+			}
+			.box1{
+				width: 100%;
+				height: 588px;
+				background: white;
+				text-align: center;
+				overflow: hidden;
+			}
+			.box1 img{
+				margin: 186px auto 0px;
+				display: block;
+			}
+			.box1 h3{
+				height: 48px;
+				line-height: 48px;
+				font-size: 48px;
+				font-weight: 500;
+				margin-top: 50px;
+			}
+			.box1 p{
+				margin-top: 19px;
+			}
+			.box1 span{
+				display: inline-block;
+				margin-top: 150px;
+			}
+			.list{
+				overflow: hidden;
+			}
+			.list li{
+				list-style: none;
+				float: left;
+				width: 25%;
+				height: 25vw;
+				position: relative;
+				overflow: hidden;
+			}
+			.list li img{
+				width: 100%;
+				height: 100%;
+				display: block;
+				position: relative;
+				top: 0;
+				left: 0px;
+				transition: all 0.5s;
+			}
+			.list li:hover img{
+				width: 110%;
+				height: 110%;
+				top:-5%;
+				left: -5%;
+			}
+			.list span{
+				position: absolute;
+				bottom: 22px;
+				left: 30px;
+				color: #bcbcbc;
+			}
+			.box3{
+				padding: 140px 0px;
+				background: white;
+			}
+			.box3 p{
+				width: 600px;
+				text-align: center;
+				font-size: 50px;
+				line-height: 60px;
+				margin: 0 auto;
+			}
+			.box4{
+				text-align: center;
+				background: #f3f3f3;
+				padding: 130px 0px;
+			}
+			.box4 h3{
+				font-size: 36px;
+				font-weight: 500;
+			}
+			.list2{
+				width: 72%;
+				margin: 57px auto 0px;
+				list-style: none;
+				overflow: hidden;
+			}
+			.list2 li{
+				float: left;
+				width: 30%;
+				margin-right: 5%;
+			}
+			.list2 li:last-child{
+				margin-right: 0px;
+			}
+			.list2 p{
+				font-size: 15px;
+				margin-top: 30px;
+				color: rgb(85, 85, 85);
+				line-height: 30px;
+			}
+			.box5{
+				padding: 130px 0px 110px;
+				text-align: center;
+				background: white;
+			}
+			.box5 h3{
+				font-size: 36px;
+				font-weight: 500;
+			}
+			.box5 img{
+				margin: 0px 3%;
+			}
+			.box6{
+				color: white;
+				background: rgba(0,0,0,0.6);
+			}
+			.box6 p{
+				margin-top: 30px;
+			}
+			.box6 div{
+				width: 228px;
+				height: 51px;
+				border: solid 2px white;
+				display: inline-block;
+				line-height: 51px;
+				margin: 35px 13px 0px;
+			}
+			.box7{
+				padding: 66px 0px;
+				text-align: center;
+				background: white;
+			}
+			.box7>img{
+				display: block;
+				margin: 0 auto;
+			}
+			.box7 div img{
+				width: 40px;
+				border-radius: 100%;
+				margin: 0px 10px;
+			}
+			.box7 span{
+				display: inline-block;
+				margin: 34px 10px;
+			}
+			@media  screen and (max-width: 768px) {
+				.box1{
+					height: 465px;
+				}
+				.box1 img{
+					margin: 110px auto 0px;
+				}
+				.box1 h3{
+					font-size: 30px;
+					line-height: 50px;
+					margin-top: 30px;
+				}
+				.box1 p {
+				    margin-top: 60px;
+				    font-size: 20px;
+				    color: #333;
+				}
+				.box1 span {
+				    margin-top: 50px;
+				}
+				.list li{
+					float: none;
+					width: 100%;
+					height: 100vw;
+				}
+				.box3{
+					padding: 50px 0px;
+				}
+				.box3 p{
+					font-size: 26px;
+					line-height: 60px;
+					width: 90%;
+				}
+				.box4{
+					padding: 50px 0px 30px;
+				}
+				.list2{
+					width: 90%;
+				}
+				.list2 li{
+					float: none;
+					width: 100%;
+					margin: 0 0px 30px;
+				}
+				.box5{
+					font-size: 0px;
+					padding: 50px 0px;
+				}
+				.box5 img {
+					width: 20%;
+				    margin: 0px 0px 0px 4%;
+				}
+				.box5 h3{
+					font-size: 28px;
+				}
+				.box6{
+					font-size: 16px;
+				}
+				.box6 div{
+					width: 80%;
+				}
+				.box7{
+					padding: 30px 0px;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<img src="img/a2.jpg" />
+			<h3>一 站 式 品 牌 营 销 咨 询 团 队</h3>
+			<p>打通品牌+产品+流量+变现+持续变现的营销闭环</p>
+			<span>品牌设计公司.</span>
+		</div>
+		<ul class="list">
+			<li>
+				<img src="img/a1.jpg" />
+				<span>品牌VI</span>
+			</li>
+			<li>
+				<img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvZDZkMWZjZWZkZmExZGJiZDhjM2FhYmNhYmI3MzJlMzUtNjgweDY4MC5qcGc_p_p100_p_3D.jpg" />
+				<span>品牌VI</span>
+			</li>
+			<li>
+				<img src="img/a1.jpg" />
+				<span>品牌VI</span>
+			</li>
+			<li>
+				<img src="https://ccdn.goodq.top/caches/9dafe3262542e282c23c2401d5288ca4/aHR0cHM6Ly81ZjMxZjdkN2YzMzdhLnQ3NC5xaWZlaXllLmNvbS9xZnktY29udGVudC91cGxvYWRzLzIwMjAvMDgvZDZkMWZjZWZkZmExZGJiZDhjM2FhYmNhYmI3MzJlMzUtNjgweDY4MC5qcGc_p_p100_p_3D.jpg" />
+				<span>品牌VI</span>
+			</li>
+		</ul>
+		<div class="box3">
+			<p>品牌全价值综合体系构建者专注创造和管理品牌</p>
+		</div>
+		<div class="box4">
+			<h3>服务项目</h3>
+			<ul class="list2">
+				<li>
+					<h4>营销策划</h4>
+					<p>您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素您还可以添加图标，按钮，图片等常用元素</p>
+				</li>
+				<li>
+					<h4>营销策划</h4>
+					<p>您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素您还可以添加图标，按钮，图片等常用元素</p>
+				</li>
+				<li>
+					<h4>营销策划</h4>
+					<p>您可以双击这里或者点击编辑按钮来修改内容。您还可以添加图标，按钮，图片等常用元素您还可以添加图标，按钮，图片等常用元素</p>
+				</li>
+			</ul>
+		</div>
+		<div class="box5">
+			<h3>服务项目</h3>
+			<img src="img/a4.png" />
+			<img src="img/a4.png" />
+			<img src="img/a4.png" />
+			<img src="img/a4.png" />
+		</div>
+		<div class="box5 box6">
+			<h3>服务项目</h3>
+			<p>获取联系</p>
+			<div>电话联系：200-200-222</div>
+			<div>邮件联系</div>
+		</div>
+		<div class="box7">
+			<img src="img/a2.jpg" />
+			<span>服务条款 </span>
+			<span>服务条款 </span>
+			<span>服务条款 </span>
+			<div>
+				<img src="img/a1.jpg" />
+				<img src="img/a1.jpg" />
+				<img src="img/a1.jpg" />
+			</div>
+		</div>
+	</body>
+</html>

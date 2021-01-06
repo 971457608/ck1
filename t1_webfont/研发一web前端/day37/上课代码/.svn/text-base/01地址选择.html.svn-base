@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../day34/上课代码/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$.ajax({
+					type:"get",
+					url:"../../day36/上课代码/json/pc-code.json",
+					async:true,
+					success:function(res){
+						$.each(res, function(idx,item) {
+							var op = $("<option></option>");
+							op.html(item.name);
+							$("#s1").append(op);
+						});
+						$.each(res[0].children, function(idx,item) {
+							var op = $("<option></option>");
+							op.html(item.name);
+							$("#s2").append(op);
+						});
+					}
+				});
+				$("#s1").change(function(){
+					$("#s2").html("");
+					$.ajax({
+						type:"get",
+						url:"../../day36/上课代码/json/pc-code.json",
+						async:true,
+						success:function(res){
+							$.each(res, function(idx,item) {
+								if(item.name==$("#s1").val()){
+									$.each(item.children, function(idx,item) {
+										var op = $("<option></option>");
+										op.html(item.name);
+										$("#s2").append(op);
+									});
+								}
+							});
+						}
+					});
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<label>请选择省份：</label>
+		<select id="s1">
+
+		</select>
+		<br />
+		<label>请选择城市：</label>
+		<select id="s2">
+			
+		</select>
+	</body>
+</html>

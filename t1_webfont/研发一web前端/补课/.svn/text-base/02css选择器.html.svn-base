@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				color: red;
+			}
+			.p1{
+				color: blue;
+			}
+			.p2{
+				font-size: 30px;
+			}
+			#i1{
+				color: red;
+			}
+			#i2{
+				background: black;
+			}
+			/*重置样式*/
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/*.e1{
+				color: red;
+				font-size: 28px;
+				background: gold;
+				font-weight: 900;
+			}
+			#e2{
+				color: red;
+				font-size: 28px;
+				background: green;
+				font-weight: 900;
+			}*/
+			.e1,#e2{
+				color: red;
+				font-size: 28px;
+				background: gold;
+				font-weight: 900;
+			}
+			#e2{
+				background: green;
+			}
+			/*包含选择符（后代选择符）*/
+			/*.box p{
+				color: red;
+			}*/
+			
+			.box>p{
+				color: red;
+			}
+			
+			/*初始状态*/
+			.a1:link{
+				color: red;
+			}
+			/*被访问后 的状态*/
+			.a1:visited{
+				color: black;
+			}
+			/*鼠标移动到链接上*/
+			.a1:hover{
+				background: gold;
+			}
+			/*鼠标按下的状态*/
+			.a1:active{
+				background: green;
+			}
+			
+			
+			/*鼠标移动到链接上*/
+			.p4:hover{
+				background: gold;
+			}
+			/*鼠标按下的状态*/
+			.p4:active{
+				background: green;
+			}
+			/*2n:偶数*/
+			/*2n+1:奇数*/
+			/*n+3:大于等于三*/
+			/*-n+3:小于等于3*/
+			.list li:nth-child(-n+3){
+				background: red;
+			}
+			
+			/*first-child:第一个*/
+			/*.list li:first-child{
+				background: blue;
+			}*/
+			
+			/*last-child:最后一个*/
+			/*.list li:last-child{
+				background: blue;
+			}*/
+			.box3 p:nth-child(3){
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>1.类型选择符</h3>
+		<span>的浮点数JFK十大科技</span>
+		<span>的浮点数JFK十大科技</span>
+		<span>的浮点数JFK十大科技</span>
+		<h3>2.类选择符(类名可以重复，一个标签可以有多个类名)</h3>
+		<p class="p1 p2 p3">撒倒萨倒萨计划骨结核</p>
+		<b class="p1">梵蒂冈梵蒂冈</b>
+		<h3>3.ID选择符(一个标签只能有1个id名，文档不可出现重复的id)</h3>
+		<i id="i1">对方是个地方大师傅似的</i>
+		<i id="i2">对方是个地方大师傅似的</i>
+		<h3>4.通配符</h3>
+		<h3>5.群组选择符</h3>
+		<em class="e1">梵蒂冈梵蒂冈梵蒂冈</em>
+		<em id="e2">梵蒂冈梵蒂冈梵蒂冈地方官梵蒂冈</em>
+		<h3>6.包含选择符（后代选择符）</h3>
+		<!--父元素，子元素，后代元素，同辈元素-->
+		<div class="box">
+			<p>顺丰到付到付的是</p>
+			<div class="box1">
+				<p>fgfgdfgfdg</p>
+			</div>
+			<a href="#">baidu</a>
+		</div>
+		<h3>7. 子选择符</h3>
+		<h3>8. 伪类选择符</h3>
+		<h1><a href="#" class="a1">百度</a></h1>
+		<p class="p4">梵蒂冈的大师傅士大夫</p>
+		<h3>9. nth-child</h3>
+		<ul class="list">
+			<li>列表内容</li>
+			<li>列表内容</li>
+			<li>列表内容</li>
+			<li>列表内容</li>
+			<li>列表内容</li>
+			<li>列表内容</li>
+			<li>列表内容</li>
+			<li>列表内容</li>
+			<li>列表内容</li>
+		</ul>
+		<div class="box3">
+			<h3>sdfsd</h3>
+			<h3>sdfsd</h3>
+			<p>大幅度反对法</p>
+			<h3>sdfsd</h3>
+			<h3>sdfsd</h3>
+			<h3>sdfsd</h3>
+			<h3>sdfsd</h3>
+		</div>
+	</body>
+</html>

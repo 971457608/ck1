@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.obox{
+				width: 678px;
+				height: 444px;
+				margin: 50px auto;
+			}
+			.hd{
+				height: 42px;
+				border-bottom: solid 1px blue;
+			}
+			.hd img:first-child{
+				float: left;
+			}
+			.hd h3{
+				font-size: 24px;
+				color: blue;
+				height: 24px;
+				line-height: 24px;
+				font-weight: 500;
+				margin-top: 4px;
+				margin-left: 8px;
+				float: left;
+			}
+			.hd img:last-child{
+				float: right;
+				margin-top: 7px;
+			}
+			.list{
+				list-style: none;	
+				line-height: 33px;
+				margin-top: 25px;
+			}
+			.list h3{
+				float: left;
+				font-weight: 500;
+				font-size: 16px;
+				width: 155px;
+				height: 33px;
+				background: url(img/a1.jpg);
+				text-align: center;
+			}
+			.list p{
+				float: left;
+				width: 392px;
+				margin-left: 11px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.list span{
+				float:right;
+			}
+			.list li{
+				overflow: hidden;
+				margin-top: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="obox">
+			<div class="hd">
+				<img src="img/未标题-3.jpg" />
+				<h3>媒体西大</h3>
+				<img src="img/未标题-4.jpg" />
+			</div>
+			<ul class="list">
+				<li>
+					<h3>学习强国</h3>
+					<p>黄金时代干啥就挂电话吉萨高地哈师大噶时间婚纱店干哈时间倒萨的国际化</p>
+					<span>2020-10-28</span>
+				</li>
+				<li>
+					<h3>学习强国</h3>
+					<p>黄金时代干啥就挂电话吉萨高地哈师大噶时间婚纱店干哈时间倒萨的国际化</p>
+					<span>2020-10-28</span>
+				</li>
+				<li>
+					<h3>学习强国</h3>
+					<p>黄金时代干啥就挂电话吉萨高地哈师大噶时间婚纱店干哈时间倒萨的国际化</p>
+					<span>2020-10-28</span>
+				</li>
+				<li>
+					<h3>学习强国</h3>
+					<p>黄金时代干啥就挂电话吉萨高地哈师大噶时间婚纱店干哈时间倒萨的国际化</p>
+					<span>2020-10-28</span>
+				</li>
+				<li>
+					<h3>学习强国</h3>
+					<p>黄金时代干啥就挂电话吉萨高地哈师大噶时间婚纱店干哈时间倒萨的国际化</p>
+					<span>2020-10-28</span>
+				</li>
+				<li>
+					<h3>学习强国</h3>
+					<p>黄金时代干啥就挂电话吉萨高地哈师大噶时间婚纱店干哈时间倒萨的国际化</p>
+					<span>2020-10-28</span>
+				</li>
+				<li>
+					<h3>学习强国</h3>
+					<p>黄金时代干啥就挂电话吉萨高地哈师大噶时间婚纱店干哈时间倒萨的国际化</p>
+					<span>2020-10-28</span>
+				</li>
+				<li>
+					<h3>学习强国</h3>
+					<p>黄金时代干啥就挂电话吉萨高地哈师大噶时间婚纱店干哈时间倒萨的国际化</p>
+					<span>2020-10-28</span>
+				</li>
+				<li>
+					<h3>学习强国</h3>
+					<p>黄金时代干啥就挂电话吉萨高地哈师大噶时间婚纱店干哈时间倒萨的国际化</p>
+					<span>2020-10-28</span>
+				</li>
+			</ul>
+		</div>
+	</body>
+</html>

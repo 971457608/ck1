@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.list li:nth-child(2n){
+				background: red;
+			}
+			.list li:nth-child(2n-1){
+				background: blue;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var v1 = document.getElementsByClassName("v1")[0];
+				var v2 = document.getElementsByName("mytext")[0];
+				var v3 = document.querySelector("#v3");
+				var v4 = document.querySelectorAll("input")[3];
+				var btn = document.getElementsByTagName("button")[0];
+				btn.onclick = function(){
+					alert("姓名："+v1.value+","+"年龄："+v2.value+",学历："+v3.value+",专业"+v4.value);
+				}
+				
+				//2.
+				var list = document.querySelector(".list");
+				var oli = document.querySelectorAll("li");
+				var i=0;
+				setInterval(function(){
+					i++;
+					if(i%2==0){
+						for(var j=0;j<oli.length;j++){
+							if(j%2==0){
+								oli[j].style.background = "blue";
+							}else{
+								oli[j].style.background = "red";
+							}
+						}
+					}else{
+						for(var j=0;j<oli.length;j++){
+							if(j%2==0){
+								oli[j].style.background = "red";
+							}else{
+								oli[j].style.background = "blue";
+							}
+						}
+					}
+				},1000)
+				
+				var oimg = document.querySelectorAll("img");
+				for(var k=0;k<oimg.length-1;k++){
+					oimg[k].onclick = function(){
+						oimg[3].src = this.src;
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h3>1、实现一个个人信息页面   姓名  年龄  学历  专业, 可以获取到输入的信息, 点击保存按钮以后, 弹出信息(信息显示形式: 姓名:张三,年龄:33,学历:本科,专业:计算机)</h3>
+		<div class="box1">
+			<input class="v1" type="text" placeholder="名字" />
+			<input name="mytext" type="text" placeholder="年龄" />
+			<input id="v3" type="text" placeholder="学历" />
+			<input type="text" placeholder="专业" />
+			<button>保存</button>
+		</div>
+		<h3>2、隔行变色（颜色1s切换一次，红变蓝，蓝变红）</h3>
+		<ul class="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+		</ul>
+		<h3>3、点击前三张图片, 切换下面的图</h3>
+		<img src="../../day08/上课代码/img/bird3.png" />
+		<img src="../../day08/上课代码/img/bird4.png" />
+		<img src="../../day08/上课代码/img/bird5.png" />
+		<br />
+		<img src="../../day08/上课代码/img/bird3.png" />
+	</body>
+</html>

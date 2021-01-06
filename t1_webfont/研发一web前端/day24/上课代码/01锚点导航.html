@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list{
+				position: fixed;
+				top: 100px;
+				right: 0px;
+				width: 80px;
+				list-style: none;
+				text-align: center;
+			}
+			.list li{
+				border: solid 1px black;
+				background: orangered;
+				height: 30px;
+				line-height: 30px;
+				margin-top: -1px;
+				cursor: pointer;
+			}
+			.list .active{
+				background: white;
+				color: red;
+			}
+			.box1{
+				margin: 0;
+			}
+			div{
+				background: #999;
+				height: 1000px;
+				margin-top: 20px;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var oli = document.querySelectorAll("li");
+				var box = document.querySelectorAll("div");
+				var t1 =0;//1020+num=2040
+				var obj = oli[0];
+				console.log(Math.floor(-2.5));
+				window.onscroll = function(){
+					t1 = document.documentElement.scrollTop||document.body.scrollTop;
+					for(var i=0;i<oli.length;i++){
+						oli[i].className="";
+					}
+					var n1 = parseInt(t1/1020);
+					oli[n1].className="active";
+				}
+				for(var j=0;j<oli.length;j++){
+					oli[j].index = j;
+					oli[j].onclick = function(){
+						var t2 = this.index*1020;
+						
+						var timer = setInterval(function(){
+							var speed = (t2-t1)*0.5;
+							speed=speed>0?Math.ceil(speed):Math.floor(speed);
+							if(t1==t2){
+								clearInterval(timer);
+							}
+							console.log(speed+",当前位置："+t1+",目标："+t2);
+							document.documentElement.scrollTop=document.body.scrollTop=t1+speed;
+						},100)
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<ul class="list">
+			<li class="active">衣服</li>
+			<li>鞋子</li>
+			<li>包包</li>
+			<li>裤子</li>
+		</ul>
+		<div class="box1">衣服</div>
+		<div class="box2">鞋子</div>
+		<div class="box3">包包</div>
+		<div class="box4">裤子</div>
+	</body>
+</html>

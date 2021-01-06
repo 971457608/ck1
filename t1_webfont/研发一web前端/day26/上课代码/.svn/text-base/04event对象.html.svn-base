@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.img1{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				transition: all 0.1s;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var btn = document.querySelector(".btn");
+				var img1 = document.querySelector(".img1");
+				//事件触发函数才能获取到event对象
+				document.onmousemove = function(e){
+					var e = e||event;
+					
+					//1.button属性
+					console.log(e.button);
+					
+					//2.可视区坐标及屏幕坐标
+					console.log("可视区坐标："+e.clientX+","+e.clientY+",屏幕区坐标："+e.screenX+","+e.screenY)
+					
+					//1, 鼠标点击某处, 让精灵移动到该处 (如下图)
+					img1.style.top = e.clientY+"px";
+					img1.style.left = e.clientX+"px";
+					
+					
+				}
+				function fn(){
+					console.log(arguments);
+				}
+				fn();
+			}
+		</script>
+	</head>
+	<body>
+		<button class="btn">按钮</button>
+		<img class="img1" src="../../day02/上课代码/img/未标题-3.png" />
+	</body>
+</html>

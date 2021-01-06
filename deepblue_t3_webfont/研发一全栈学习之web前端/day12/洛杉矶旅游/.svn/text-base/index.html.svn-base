@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>洛杉矶旅游</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div class="top-bar">
+			<img src="img/ia_100000000.webp" />
+		</div>
+		<div class="btn">
+			<p></p>
+			<p></p>
+			<p></p>
+			<p></p>
+		</div>
+		<div class="box1">
+			<div class="box1-con">
+				<div class="box1-l">
+					<i></i>
+					<span>400-6666-6666</span>
+					<i></i>
+					<span>09:00~18:00</span>
+				</div>
+				<div class="box1-r">
+					<i></i>
+					<a href="#">登录</a>
+					<i></i>
+					<a href="#">注册</a>
+				</div>
+			</div>
+		</div>
+		<div class="box2">
+			<div class="box2-con">
+				<img  class="logo box-l" src="img/ia_100000000.webp" />
+				<div class="nav box-l">
+					<a href="#">首页</a>				
+					<a href="#">景点套餐</a>
+					<a href="#">旅游资讯</a>
+					<a href="#">关于我们</a>
+					<a href="#">联系我们</a>
+					<a href="#">旅游签证</a>
+				</div>
+				<img class="box-l img1" src="img/a1.png" />
+				<div class="box1-r box2-r">
+					<i></i>
+					<span>400-6666-6666</span>
+				</div>
+			</div>
+		</div>
+		<div class="box3">
+			<div class="box3-con">
+				<span> North America / USA</span>
+				<h3>Los Angeles</h3>
+			</div>
+		</div>
+		<div class="box4">
+			<h3>最新公告:</h3>
+			<div class="box4-con">
+				<a href="#">中国成为纽约市第二大境外旅游客源国</a>
+				<a href="#">元旦小长假盘点：三亚 境外游客增长迅速 全域旅游促游客满意度提升</a>
+				<a href="#">旅游经营服务七类行为 或将列入“严重失信”</a>
+				<a href="#">中国成为纽约市第二大境外旅游客源国</a>
+			</div>
+		</div>
+		<div class="box5">
+			<div class="box5-con">
+				<div class="box5-hd">
+					<h3>洛杉矶热门旅游景点</h3>
+					<span>Los Angeles Tourist Attractions</span>
+				</div>
+				<ul class="box5-list">
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000001.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000004.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000005.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000006.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000007.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000008.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000009.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000010.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000011.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000001.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000005.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box5 box6">
+			<div class="box5-con">
+				<div class="box5-hd">
+					<h3>入住酒店</h3>
+					<span>Hotel</span>
+				</div>
+				<ul class="box5-list">
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000001.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000004.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000005.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000006.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000007.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000008.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000009.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000010.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000011.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000001.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box5 box7">
+			<div class="box5-con">
+				<div class="box5-hd">
+					<h3>人气美食</h3>
+					<span>Popular Food</span>
+				</div>
+				<ul class="box5-list">
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000001.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000004.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000005.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000006.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000007.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000008.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000009.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+					<li title="亨廷顿海滩">
+						<img src="img/ia_100000010.webp" />
+						<span>亨廷顿海滩</span>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box8">
+			<div class="box8-con">
+				<div class="box8-hd">
+					<h3>旅行套餐推荐</h3>
+					<span>Travel Packages To Recommend</span>
+				</div>
+				<ul class="box8-list">
+					<li>
+						<div class="box8-list-hd">
+							<h3>32000<span>元</span></h3>
+							<p>洛杉矶定制三日游</p>
+						</div>
+						<img src="img/ia_100000030.webp" />
+						<h2>洛杉矶定制三日游</h2>
+						<p>能特性功能特性和描述一功能特能特性和描述特性和描述能特性功能特性和描述一功能特能特性和描述特性和描述三</p>
+						<a href="#">了解详情</a>
+					</li>
+					<li>
+						<div class="box8-list-hd">
+							<h3>32000<span>元</span></h3>
+							<p>洛杉矶定制三日游</p>
+						</div>
+						<img src="img/ia_100000031.webp" />
+						<h2>洛杉矶定制三日游</h2>
+						<p>能特性功能特性和描述一功能特能特性和描述特性和描述能特性功能特性和描述一功能特能特性和描述特性和描述三</p>
+						<a href="#">了解详情</a>
+					</li>
+					<li>
+						<div class="box8-list-hd">
+							<h3>32000<span>元</span></h3>
+							<p>洛杉矶定制三日游</p>
+						</div>
+						<img src="img/ia_100000032.webp" />
+						<h2>洛杉矶定制三日游</h2>
+						<p>能特性功能特性和描述一功能特能特性和描述特性和描述能特性功能特性和描述一功能特能特性和描述特性和描述三</p>
+						<a href="#">了解详情</a>
+					</li>
+				</ul>
+			</div>	
+		</div>
+		<div class="box9">
+			<div class="box9-con">
+				<div class="box8-hd">
+					<h3>服务流程</h3>
+					<span>Service Process</span>
+				</div>
+				<ul class="box9-list">
+					<li>
+						<h3>第<b>1</b>步</h3>
+						<i></i>
+						<div class="line"></div>
+						<h2>填写表单</h2>
+						<p>您只需通过网站、微信、电话、客服等任意途径联系我们，就会有您</p>
+					</li>
+					<li>
+						<h3>第<b>2</b>步</h3>
+						<i></i>
+						<div class="line"></div>
+						<h2>私人服务</h2>
+						<p>您只需通过网站、微信、电话、客服等任意途径联系我们，就会有您</p>
+					</li>
+					<li>
+						<h3>第<b>3</b>步</h3>
+						<i></i>
+						<div class="line"></div>
+						<h2>办理签证</h2>
+						<p>您只需通过网站、微信、电话、客服等任意途径联系我们，就会有您</p>
+					</li>
+					<li>
+						<h3>第<b>4</b>步</h3>
+						<i></i>
+						<div class="line"></div>
+						<h2>填写表单</h2>
+						<p>您只需通过网站、微信、电话、客服等任意途径联系我们，就会有您</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box10">
+			<div class="box9-con">
+				<div class="box10-l">
+					<h2>洛杉矶热门旅游目的地</h2>
+					<p>当今最领先的响应式自助建站平台，我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。无论您是普通互联网用户， 还是专业网站制作人员，都能使用起飞页设计出最具专业水准的网站。</p>
+				</div>
+				<ul class="box10-list">
+					<li>
+						<p>注册用户</p>
+						<div></div>
+						<p>注册用户</p>
+					</li>
+					<li>
+						<p>注册用户</p>
+						<div></div>
+						<p>注册用户</p>
+					</li>
+					<li>
+						<p>注册用户</p>
+						<div></div>
+						<p>注册用户</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="box11">
+			<ul class="box11-list">
+				<li>
+					<img src="img/ia_100000033.webp" />
+					<h3>热门旅游目的地</h3>
+					<p>我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。</p>
+				</li>
+				<li>
+					<img src="img/ia_100000034.webp" />
+					<h3>热门旅游目的地</h3>
+					<p>我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。</p>
+				</li>
+				<li>
+					<img src="img/ia_100000035.webp" />
+					<h3>热门旅游目的地</h3>
+					<p>我们的流线式网页布局设计方案和可视化图文内容编辑模式让网站制作和维护成为一件轻松惬意的事。</p>
+				</li>
+			</ul>
+		</div>
+		<div class="box12">
+			<div class="box12-con">
+				<h3>生活不止眼前的苟且，还有远方和诗</h3>
+				<p>开启一段难忘的旅行</p>
+				<a class="a1" href="#">立即注册</a>
+				<div class="box-val">
+					<input type="text" placeholder="姓名" />
+					<input type="text" placeholder="目的地" />
+					<input type="text" placeholder="天数" />
+				</div>
+				<input type="text" placeholder="联系电话" />
+				<textarea placeholder="备注内容"></textarea>
+				<a class="a2" href="#">提交</a>
+			</div>
+		</div>
+		<div class="box13">
+			<img src="img/ia_100000036.webp" />
+			<p>版权所有 ©2017   地址：苏州市工业园区大道金鸡湖大道99号     苏ICP备1230012300号</p>
+		</div>
+		<ul class="box14">
+			<li><i></i></li>
+			<li><i></i></li>
+			<li><i></i></li>
+			<li><i></i></li>
+		</ul>
+		<a href="#" class="top-btn">^</a>
+	</body>
+</html>

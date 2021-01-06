@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: fixed;
+				top: 40px;
+				left: 10px;
+			}
+		</style>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded",function(){
+				var btn = document.querySelector("button");
+				var box = document.querySelector(".box");
+				var speed=0;
+				btn.onclick =function(){
+					//3.目标值
+					var target = 500;
+					var timer = setInterval(function(){
+						//1.获取当前值
+						var x = box.offsetLeft;
+						//2.给一个速度
+						speed += (target - x) / 3;
+						speed *= 0.9;  //摩擦系数
+						console.log(speed);
+						//3.开始运动
+						if(x==target){
+							clearInterval(timer);
+						}else{
+							box.style.left = x+speed+"px";
+						}
+					},100)
+				}
+			})
+		</script>
+	</head>
+	<body>
+		<button>开始运动</button>
+		<div class="box"></div>
+	</body>
+</html>

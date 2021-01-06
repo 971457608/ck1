@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				font-size: 10px;
+			}
+			.box1{
+				width: 10rem;/*相对根节点html的字体大小来计算*/
+				height: 10em;/*自身字体大小*em=px;20*10=200*/
+				background: red;
+				font-size: 20px;
+			}
+			.box2{
+				width: 20vw;/*1vw等于视窗宽度的1%*/
+				height: 10vh;/*1vh等于视窗高度的1%。*/
+				background: blue;
+			}
+			.box3{
+				width: 20vmin;/*取vw和vh中较小的那个。*/
+				height: 10vmax;/*取vw和vh中较大的那个*/
+				background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1">
+			<h1>hello word</h1>
+		</div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</body>
+</html>

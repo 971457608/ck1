@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text" href="font/iconfont.css" rel="stylesheet" />
+		<style type="text/css">
+			.icon-niao{
+				font-size: 100px;
+				color: red;
+				transition: all 0.5s;
+			}
+			.icon-niao:hover{
+				font-size: 200px;
+				color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<span class="icon iconfont icon-niao"></span>
+		<span class="icon iconfont icon-dianhua1"></span>
+		<span class="icon iconfont icon-dianzan2"></span>
+	</body>
+</html>

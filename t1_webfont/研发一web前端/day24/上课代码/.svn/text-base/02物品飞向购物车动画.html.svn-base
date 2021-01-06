@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list li{
+				width: 25%;
+				float: left;
+				list-style: none;
+				overflow: hidden;
+				text-align: center;
+				margin-bottom: 20px;
+			}
+			.list img{
+				display: block;
+				width: 80%;
+				margin: 0 auto;
+			}
+			.car{
+				position: fixed;
+				top: 100px;
+				right: 0px;
+			}
+			.active{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				width: 0px;
+				transition: all 2s;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var car = document.querySelector(".car");
+				var list = document.querySelector(".list");
+				var btn = list.querySelectorAll("button");
+				
+				for(var i=0;i<btn.length;i++){
+					btn[i].onclick = function(){
+						var carx = car.offsetLeft;
+						var cary = car.offsetTop;
+						var t1 = document.documentElement.scrollTop||document.body.scrollTop;
+						var img1 = document.createElement("img");
+						img1.className="active";
+						img1.src = this.parentNode.querySelector("img").src;
+						img1.style.left = this.parentNode.querySelector("img").offsetLeft+"px";
+						img1.style.top = this.parentNode.querySelector("img").offsetTop-t1+"px";
+						img1.style.width = this.parentNode.querySelector("img").offsetWidth+"px";
+						document.body.appendChild(img1);
+						setTimeout(function(){
+							img1.style.left = carx+"px";
+							img1.style.top = cary+"px";
+							img1.style.width="24px";
+							setTimeout(function(){
+								img1.parentNode.removeChild(img1);
+							},2000)
+						},100)
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<img class="car" src="../../day02/上课代码/img/未标题-3.png" />
+		<ul class="list">
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+			<li>
+				<img src="../../day07/上课代码/img/2.jpg" />
+				<button>加入购物车</button>
+			</li>
+		</ul>
+	</body>
+</html>

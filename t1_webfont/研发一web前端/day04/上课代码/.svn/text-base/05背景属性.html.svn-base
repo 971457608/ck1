@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				height: 5000px;
+			}
+			.box{
+				width: 300px;
+				height: 200px;
+				border: solid 1px black;
+				background-color: white;/*背景颜色*/
+				background-image:url(img/未标题-3.png) ;/*背景图片*/
+				background-repeat: no-repeat;/*平铺属性*/
+				background-attachment: scroll;/*背景图固定*/
+				background-position: right center;/*位置*/
+				background-position: 0px 0px;
+				background-size:contain ;/*背景图大小*/
+				background-size:100px 200px;
+				background: white url(img/未标题-3.png) no-repeat scroll 0px 0px/100px 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #999;
+			}
+			.obox{
+				width: 590px;
+				height: 475px;
+				background: white;
+				margin: 100px auto;
+			}
+			.obox img{
+				float: left;
+				box-sizing: border-box;
+				width: 100px;
+				height: 100px;
+				margin-left: 15px;
+				margin-top: 15px;
+				cursor: pointer;
+				border: solid 1px white;
+			}
+			.obox img:first-child{
+				width: 330px;
+				height: 330px;
+				border: none;
+			}
+			.obox img:nth-child(2){
+				border: solid 1px red;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var oimg = document.querySelectorAll("img");
+				var obj = oimg[1];
+				for(var i=1;i<oimg.length;i++){
+					oimg[i].onmouseenter = function(){
+						obj.style.border="solid 1px white";
+						this.style.border="solid 1px red";
+						oimg[0].src = this.src;
+						obj=this;
+						
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="obox">
+			<img src="img/2.jpg" />
+			<img src="img/2.jpg" />
+			<img src="img/3.jpg" />
+			<img src="img/4.jpg" />
+			<img src="img/5.jpg" />
+			<img src="img/6.jpg" />
+			<img src="img/7.jpg" />
+			<img src="img/8.jpg" />
+			<img src="img/9.jpg" />
+			<img src="img/10.jpg" />
+			<img src="img/11.jpg" />
+			<img src="img/12.jpg" />
+		</div>
+	</body>
+</html>

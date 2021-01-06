@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			在一般传值调用的机制中只能把实参传送给形参，
+//			而不能把形参的值反向地传送给实参。
+//			因此在函数调用过程中，形参值发生改变，
+//			而实参中的值不会变化。
+//			function   addNum(n){
+//				n += 5 ;//15
+//			}
+//			var  a=10;
+//			addNum(a);           
+//          alert(a);//10
+            
+            
+            //局部变量就是定义在函数内部的变量，这个变量只能在函数内部使用，即作用域范围只是函数内部，另外，形参也是局部变量。
+            //全局变量就是定义在函数外部的变量，这个变量在任何函数中都有效，即作用域范围是当前文件的任何地方。
+            //注意：定义变量时省略var是不安全的，不过是合法的，不写var的时候会被解释是全局变量
+            var a = 10;
+		    function m1(){
+				var b = 5;
+				c = 15;
+		        //alert(b);//先执行，5
+		    }
+		    m1();
+		    //alert(c); //10
+			
+			//函数内部可以再包含其他函数 
+  			//函数之间允许相互调用，也允许向外调用, 
+  			//不可以调用同级函数的嵌套函数
+  			function s1(){
+  				console.log("s1");
+  				function s2(){
+  					console.log("s2");
+  				}
+  				s2();
+  			}
+  			function s3(){
+  				console.log("s3");
+  			}
+			s3();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

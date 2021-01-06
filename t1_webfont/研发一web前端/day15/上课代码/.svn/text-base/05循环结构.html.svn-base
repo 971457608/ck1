@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//示例：计算1+2+3+……+100之和。
+			var s = 0;
+			var i = 0;
+//			while(i<100){
+//				i++;
+//				s+=i;
+//			}
+//			console.log(s);
+			
+			do{
+				i++;
+				s+=i;
+			}while (i<100);
+			console.log(s);
+			
+			var b1 = 0;
+			for(var j=1;j<=100;j++){
+				b1+=j;
+				if(j%4==0){
+					//break; 结束循环
+					continue;//跳过当前
+				}
+				document.write(j+"<br/>");
+			}
+			console.log(b1);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

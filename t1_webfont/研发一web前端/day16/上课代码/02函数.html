@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//定义函数 
+			//function 关键字
+			//fn  函数名
+			function fn(){
+				//代码块
+				document.write("呵呵");
+			}
+			
+			//调用函数
+			fn();
+			
+			//sum(2,8);  //计算2+8的结果。
+			function sum(a,b,c){
+				//a,b 叫做形参
+				console.log(a+b);
+				//return  返回值
+				return a+b+c; 
+			}
+			//2,8 叫做实参
+			//sum(2,8,20);
+			console.log(sum(2,8,20));
+			
+			//
+			function sum1(){
+				//arguments 内置数组
+				console.log(arguments);
+				
+				//length 长度
+				console.log(arguments.length);
+				
+				//访问第5个数组元素,通过下标访问数组元素，下标从0开始
+				console.log(arguments[4]);
+				
+				//访问最后一个数组元素
+				console.log(arguments[arguments.length-3]);
+				
+				//求和
+				var s = 0;
+				for(var i=0;i<arguments.length;i++){
+					s+=arguments[i];
+				};
+				console.log(s);
+			}
+			sum1(2,1,100,55,66,88,99,44,55,66,55,11,22,456,44,55,44,22,33,444);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

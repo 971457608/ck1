@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				//获取元素节点
+				//1.getElementById 通过id获取元素节点
+				var box = document.getElementById("box");
+				
+				//2.getElementsByClassName() 通过类名（class）获取元素节点，返回数组
+				var box = document.getElementsByClassName("obox");
+				
+				//3.getElementsByName 通过name属性获取元素节点，返回数组
+				var box = document.getElementsByName("mybox");
+				
+				//4.getElementsByTagName 通过标签名获取元素节点，返回数组
+				var box = document.getElementsByTagName("div");
+				
+				//5.querySelector 通过标签名、类名、id获取元素节点，返回第一个
+				var box = document.querySelector(".obox");
+				
+				//6.querySelectorAll通过标签名、类名获取元素节点，返回数组
+				var box = document.querySelectorAll(".obox");
+				console.log(box[1].innerHTML);
+				
+				var list = document.querySelector(".list");
+				var oli = list.querySelectorAll("li");
+				console.log(oli);
+				
+				for(var i=0;i<oli.length;i++){
+					oli[i].index = i;
+					oli[i].onclick = function(){
+						//this 指向的是当前被点击的对象
+						console.log(this.innerHTML+","+this.index);
+					}
+				}
+				
+				//属性分类：固有属性（），自定义属性
+				//顶语法，中括号表示法是可以获取到固有属性的值，拿不到自定义属性的值
+				console.log(box[0].title);
+				console.log(box[0].id);
+				console.log(box[0].className);
+				console.log(box[0]["id"]);
+				console.log(box[0].name);//"undefined"
+				box[0].className="active";
+				var v1 = document.querySelector("input");
+				console.log(v1.name);//"mytext"
+				v1.name="hehe";
+				
+				//getAttribute()方法
+				console.log(box[0].getAttribute("name"));
+				
+				//setAttribute()方法将设置元素中某个属性和值
+				box[0].setAttribute("title","aaa");
+				
+				//removeAttribute() 可以移除 HTML 属性。
+				box[0].removeAttribute("name");
+				
+				//innerHTML
+				console.log(box[0].innerHTML);
+				
+				//innerText
+				console.log(box[0].innerText);//"这是一个div标签1"
+			
+				//outerHTML
+				console.log(box[0].outerHTML);
+//				<div align="" id="box" class="active" title="aaa">
+//					<span>这是一 个div标签1</span>
+//				</div>
+			}
+		</script>
+	</head>
+	<body>
+		<h3>1.节点分类</h3>
+		<!--元素节点：div
+		属性节点：id="box" class="obox" title="盒子"
+		文本节点：这是一个div标签-->
+		<div align="" id="box" class="obox" title="盒子1" name="mybox1">
+			<span>这是一 个div标签1</span>
+		</div>
+		<div class="obox" title="盒子2" name="mybox">这是一个div标签2</div>
+		<input type="text" name="mytext" maxlength="" size="" value="" />
+		<ul class="list">
+			<li>列表内容1</li>
+			<li>列表内容2</li>
+			<li>列表内容3</li>
+			<li>列表内容4</li>
+			<li>列表内容5</li>
+		</ul>
+		<ul>
+			<li>列表内容</li>
+			<li>列表内容</li>
+			<li>列表内容</li>
+			<li>列表内容</li>
+			<li>列表内容</li>
+		</ul>
+	</body>
+</html>

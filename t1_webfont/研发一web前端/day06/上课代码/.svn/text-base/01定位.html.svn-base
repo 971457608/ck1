@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				height: 5000px;
+			}
+			div{
+				width: 100px;
+				height: 100px;
+				text-align: center;
+				line-height: 100px;
+				color: white;
+			}
+			.box1{
+				background: gold;
+				z-index: 99;/*必须有定位属性才生效*/
+			}
+			.box2{
+				background: blueviolet;
+				position: relative;/*相对定位，参照物：是元素本身，元素占据本来的位置*/
+				top: -30px;
+				left: 50px;
+				z-index: -10;
+			}
+			.box3{
+				background: brown;
+				position: absolute;/*绝对定位，参照物：具有定位属性的包含快，元素脱离文档流*/
+				top: 30px;
+				left: 60px;
+				/*z-index: 0;默认值为0*/
+			}
+			.box4{
+				background: orangered;
+				position: fixed;/*固定定位，参照物：浏览器窗口，元素脱离文档流*/
+				top: 50px;
+				left: 120px;
+				z-index: 5;
+			}
+			.box5{
+				width: 200px;
+				height: 200px;
+				margin: 100px;
+				background: black;
+				position: relative;
+			}
+			.box6{
+				width: 100px;
+				height: 100px;
+				background: blue;
+				position: absolute;
+				top: 50px;
+				left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--ps:默认情况下，使用了定位属性的元素层叠性比没使用定位属性的元素要高。
+		都使用了定位属性的元素层叠性看他们的HTML顺序，在后面的高-->
+		<div class="box1">1</div>
+		<div class="box2">2</div>
+		<div class="box3">3</div>
+		<div class="box4">4</div>
+		<div class="box5">
+			<div class="box6"></div>
+		</div>
+	</body>
+</html>

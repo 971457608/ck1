@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			//定义变量 
+			//var 关键字
+			//a1 变量名
+			//10 值
+			var a1 = 10;
+			var a2 = "hello word";
+			console.log(a1);
+			console.log(a1+","+a2);
+			
+			//定义多个变量
+			var b1=10,b2=20,b3=30;
+			console.log(b2);
+			
+			var c1;
+			console.log(typeof c1);
+			console.log(typeof a2);
+			
+			var c2 = null;
+			//== 比较值
+			//=== 比较值和类型
+			console.log(c2===c1);
+			
+			var d1 = true,d0="hehe",d2=100.00,d3=0.5,d4=10.5e3,d5="30";
+			console.log(typeof d2);
+			console.log(d4);
+			
+			console.log("10"+20);
+			var d6 = d2+d5;
+			console.log(d6);
+			console.log(-12/0);//"Infinity" 正无穷
+			
+			// isNaN()函数，用来判断这个值到底是不是 NaN
+			console.log(isNaN(12/4));
+			
+			//类型转换
+			var e1 = 10.5555555;
+			//parseInt 去掉小数部分，"number"
+			//parseInt 保留小数部分，"number"
+			//Math.round 四舍五入，"number"
+			console.log(typeof e1);
+			console.log( parseFloat(e1));
+			console.log(e1.toFixed(2));
+			console.log(Math.round(12.5555));
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 200px;
+				height: 200px;
+				background: red;
+				text-align: center;
+				line-height: 200px;
+				font-size: 30px;
+				color: white;
+				transition-property:all ;/*参与属性*/
+				transition-duration: 5s;/*检索或设置对象过渡的持续时间*/
+				transition-timing-function: linear;/*动画类型 */
+				transition-delay: 3s;/*延迟过渡的时间*/
+				-o-transition: all 5s linear 3s;/*兼容写法*/
+				-moz-transition: all 5s linear 3s;
+				-webkit-transition: all 5s linear 3s;
+				-ms-transition: all 5s linear 3s;
+				transition: all 5s linear 0s;/*简写*/
+			}
+			.box:hover{
+				width: 300px;
+				height: 300px;
+				background: blue;
+				line-height: 300px;
+				font-size: 50px;
+				border-radius: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">~呵呵~</div>
+	</body>
+</html>

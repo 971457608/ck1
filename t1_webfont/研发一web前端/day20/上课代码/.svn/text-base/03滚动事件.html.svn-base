@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				height: 5000px;
+			}
+			#box{
+				width: 100px;
+				height: 100px;
+				background: red;
+				position: fixed;
+				right: 10px;
+				bottom: 10px;
+				display: none;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var box = document.getElementById("box");
+				//绑定滚动事件
+				var scrollTop=0;
+				window.onscroll = function(){
+					console.log("滚动条滚动了");
+					//滚动条距离顶部的位置
+					scrollTop = document.documentElement.scrollTop || document.body.scrollTop;	
+					console.log(scrollTop);
+					if(scrollTop>=2000){
+						box.style.display="block";
+					}else{
+						box.style.display="none"
+					}
+				}
+				//返回顶部
+				box.onclick = function(){
+					var timer = setInterval(function(){
+						scrollTop=Math.floor(scrollTop*0.7);
+						if(scrollTop==0){
+							clearInterval(timer);
+						}
+						document.documentElement.scrollTop = document.body.scrollTop=scrollTop;
+					},50)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="box">返回顶部</div>
+	</body>
+</html>

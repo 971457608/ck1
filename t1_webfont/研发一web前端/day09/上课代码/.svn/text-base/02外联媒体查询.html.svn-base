@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--min-width:1024px 大于等于1024px-->
+		<link media="screen and (min-width:1024px)" rel="stylesheet"  href="css/01.css" />
+		<link media="screen and (max-width:1024px)" rel="stylesheet" href="css/02.css" />
+	</head>
+	<body>
+		<div class="box"></div>
+	</body>
+</html>

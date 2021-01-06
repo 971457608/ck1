@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				text-align: center;
+				padding-top: 100px;
+			}
+			.active{
+				border: solid 1px black;
+				width: 100px;
+				height: 30px;
+				line-height: 30px;
+				display: inline-block;
+				margin-top: -1px;
+				margin-left: -1px;
+			}
+		</style>
+	</head>
+	<body>
+	</body>
+	<script type="text/javascript">
+		for(var i=1;i<=9;i++){
+			for(var j=1;j<=i;j++){
+				var s1 = document.createElement("span");
+				s1.innerHTML = i+"×"+j+"="+i*j;
+				s1.className = "active";
+				document.body.appendChild(s1);
+			}
+			document.write("<br />");
+		}
+	</script>
+</html>

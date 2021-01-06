@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				padding: 0px 10px;
+			}
+			h3{
+				margin: 30px 0px;
+			}
+			#obox{
+				width: 200px;
+				height: 30px;
+				line-height: 30px;
+				border: solid 1px black;
+				border-radius: 50px;
+				text-align: center;
+				overflow: hidden;
+				position: relative;
+			}
+			#obox p{
+				width: 100%;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			#box1{
+				height: 30px;
+				width: 0px;
+				background: red;
+			}
+			#box2{
+				width: 100px;
+				height: 100px;
+				background: gold;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				var p1 = document.getElementById("p1");
+				var btn1 = document.getElementById("btn1");
+				var btn2 = document.getElementById("btn2");
+				var timer;
+				var h=0;
+				var m = 0;
+				var s=0;
+				var ms =0;
+				btn1.onclick = function(){
+					btn2.innerHTML="暂停";
+					h=0;
+					m = 0;
+					s=0;
+					ms =0;
+					clearInterval(timer);
+					timer = setInterval(fn,100);
+				}
+				function fn(){
+					ms+=100;
+					if(ms==1000){
+						ms=0;
+						s++;
+					}
+					if(s==60){
+						s=0;
+						m++;
+					}
+					if(m==60){
+						m=0;
+						h++;
+					}
+					p1.innerHTML=fn2(h)+"时"+fn2(m)+"分"+fn2(s)+"秒"+ms+"毫秒";
+				}
+				btn2.onclick = function(){
+					if(btn2.innerHTML=="暂停"){
+						clearInterval(timer);
+						btn2.innerHTML="继续";
+					}else{
+						btn2.innerHTML="暂停";
+						timer = setInterval(fn,100);
+					}
+					
+				}
+				function fn2(n){
+					return n<10?"0"+n:n;
+				}
+				
+				//2.动态显示当前日期
+				var p2 = document.getElementById("p2");
+				setInterval(function(){
+					var d = new Date();
+					var y = d.getFullYear();
+					var mon = d.getMonth();
+					mon++;
+					var day = d.getDate();
+					var oh = d.getHours();
+					var m1 = d.getMinutes();
+					var s1 = d.getSeconds();
+					var w1 = d.getDay();//0-6
+					var arr=["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+					p2.innerHTML = y+"年"+fn2(mon)+"月"+day+"日 "+fn2(oh)+":"+fn2(m1)+":"+fn2(s1)+" "+arr[w1]
+				},1000)
+				
+				//3.进度条
+				var p3 = document.getElementById("p3");
+				var box1 = document.getElementById("box1");
+				var b1=0;
+				var timer2 = setInterval(function(){
+					b1++;
+					p3.innerHTML = b1+"%";
+					box1.style.width=b1+"%";
+					if(b1==100){
+						clearInterval(timer2);
+					}
+				},30)
+				
+				//4.
+				var box2 = document.getElementById("box2");
+				var btn3 = document.getElementById("btn3");
+				var arr2 = ["gold","green","red","black","pink"];
+				btn3.onclick = function(){
+					var i3=0;
+					clearInterval(TimeRanges);
+					TimeRanges = setInterval(function(){
+						i3++;
+						if(i3==arr2.length){
+							i3=0;
+						}
+						box2.style.background = arr2[i3];
+					},1000)
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<h3>1.秒表功能</h3>
+		<p id="p1">00时00分00秒000毫秒</p>
+		<button id="btn1">开始</button>
+		<button id="btn2">暂停</button>
+		<h3>2.动态显示当前日期</h3>
+		<p id="p2">2020年11月27日 14:25:30 星期五</p>
+		<h3>3.进度条</h3>
+		<div id="obox">
+			<div id="box1"></div>
+			<p id="p3">0%</p>
+		</div>
+		<h3>4.变颜色</h3>
+		<div id="box2"></div>
+		<button id="btn3">开始变色</button>
+	</body>
+</html>

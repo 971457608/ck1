@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list{
+				height: 60px;
+				background: wheat;
+				text-align: center;
+			}
+			.list li{
+				margin: 0px 10px;
+				line-height: 60px;
+				display: inline-block;
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			.line{
+				position: relative;
+				top: -10px;
+				width: 0%;
+				border-top: solid 1px blue;
+				transition: all 1s;
+				margin:  0 auto;
+			}
+			.list li:first-child .line{
+				width: 100%;
+			}
+			.list li:hover .line{
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="list">
+			<li>
+				<a href="#">首页</a>
+				<div class="line"></div>
+			</li>
+			<li>
+				<a href="#">首首页页</a>
+				<div class="line"></div>
+			</li>
+			<li>
+				<a href="#">首首页页</a>
+				<div class="line"></div>
+			</li>
+			<li>
+				<a href="#">首页</a>
+				<div class="line"></div>
+			</li>
+			<li>
+				<a href="#">首页首页首页</a>
+				<div class="line"></div>
+			</li>
+		</ul>
+	</body>
+</html>

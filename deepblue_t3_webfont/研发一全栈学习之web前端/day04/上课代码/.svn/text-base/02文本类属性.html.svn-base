@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 200px;/*宽度*/
+				height: 200px;/*高度*/
+				background-color: greenyellow;
+				text-align: center;/*水平对齐方式*/
+				line-height: 200px;/*行高*/
+				line-height: 20;/*倍行高=行高*自身字体大小*/
+				text-decoration:line-through;/*文本修饰*/
+			}
+			input{
+				height: 60px;
+				vertical-align: bottom;/*垂直对齐方式*/
+			}
+			a{
+				text-decoration: none;
+			}
+			.p1{
+				text-indent: 32px;/*首行缩进*/
+				letter-spacing: 10px;/*字间距*/
+				word-spacing: 50px;/*词间距*/
+				text-transform: uppercase;/*控制英文大小写*/
+				text-shadow:0px 0px 10px red ;/*文本阴影*/
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">呵呵</div>
+		<input type="text" />
+		<span>hello word</span>
+		<a href="#">baidu</a>
+		<p class="p1"> hello word 的客户江苏分公司的黄金分割活动时间返回的是分公司的海景房公司的黄金分割点和发动机事故发生的黄金分割黄金时代防护等级事故发生的黄金分割的设计风格就幅度和时间购房计划的</p>
+	</body>
+</html>

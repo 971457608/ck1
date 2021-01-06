@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				height: 4000px;
+			}
+			#box1{
+				width: 100px;
+				height: 100px;
+				background: gold;
+				position: static;
+				z-index: 99;
+			}
+			#box2{
+				width: 100px;
+				height: 100px;
+				background: green;
+				position: relative;/*相对定位,参照物是它本身，元素不会脱离文档流*/
+				top: -50px;
+				left: 20px;
+			}
+			#box3{
+				width: 100px;
+				height: 100px;
+				background: blanchedalmond;
+				position: absolute;/*绝对定位,参照物是具有定位属性的包含块，元素会脱离文档流*/
+				top: 20px;
+				left: 50px;
+				z-index: 2;
+			}
+			#box4{
+				width: 100px;
+				height: 100px;
+				background: orange;
+				position: fixed;/*固定定位,参照物是浏览器窗口，元素会脱离文档流*/
+				top: -30px;
+				left: 80px;
+				z-index: -1;
+			}
+			.obox{
+				width: 200px;
+				height: 200px;
+				background: red;
+				margin: 100px auto;
+				position: relative;
+				border-radius: 20px ;
+				border-bottom-left-radius: ;
+				border-top-left-radius: ;
+				border-top-right-radius: ;
+				border-bottom-right-radius: ;
+				border-radius: 20px/60px ;/*圆的水平半径，圆的垂直半径*/
+			}
+			.box5{
+				width: 40px;
+				height: 120px;
+				border-radius: 100%;
+				background: brown;
+				position: absolute;
+				top: 50px;
+				left: 50px;
+			}
+			.box5:after{
+				content: "1234";
+				width: 50px;
+				height: 50px;
+				background: gold;
+				position: absolute;
+				top: 0px;
+				left: -50px;
+			}
+			.box5:before{
+				content: "1234";
+				width: 50px;
+				height: 50px;
+				background: blue;
+				position: absolute;
+				top: 0px;
+				left: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1">
+			1
+		</div>
+		<div id="box2">
+			2
+		</div>
+		<div id="box3">
+			3
+		</div>
+		<div id="box4">
+			4
+		</div>
+		<div class="obox">
+			<div class="box5"></div>
+		</div>
+	</body>
+</html>

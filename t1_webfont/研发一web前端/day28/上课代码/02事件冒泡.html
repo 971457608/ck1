@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var btn = document.querySelector(".btn");
+				btn.onclick = function(e){
+					var oEvent =e||event;
+					console.log("按钮被点击了！");
+					//1, 取消冒泡
+				    oEvent.cancelBubble = true;
+					
+					//2, 停止传播
+					oEvent.stopPropagation();
+
+				}
+				document.onclick = function(){
+					console.log("文档被点击了！");
+				}
+				
+				//右键菜单
+				document.oncontextmenu = function(e){
+					var e = e||event;
+					console.log(e.button);
+					console.log("右键被按下");
+					
+					return false;
+				}
+
+			}
+		</script>
+	</head>
+	<body>
+		<h3>事件的冒泡:
+		       指的是在页面上层节点触发的事件会继续传递给下层节点, 这种传递方式,我们称之为事件的冒泡传递;
+		</h3>
+		<button class="btn">按钮</button>
+	</body>
+</html>

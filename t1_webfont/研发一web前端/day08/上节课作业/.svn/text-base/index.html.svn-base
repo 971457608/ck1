@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list{
+				width: 1084px;
+				margin:  0px auto ;
+				list-style: none;
+				padding: 50px 0px;
+			}
+			.list li{
+				width: 254px;
+				border: solid 1px #ccc;
+				float: left;
+				margin-right: 20px;
+				margin-top: 20px;
+				position: relative;
+				top: 0px;
+				transition: all 0.5s;
+				
+			}
+			.list li:nth-child(4n){
+				margin-right: 0px;
+			}
+			.list li:hover{
+				top: -15px;
+				box-shadow: 0px 0px 6px 10px #cccccc17;
+			}
+			.list li:hover h3{
+				color: green;
+			}
+			.list li:hover .line2{
+				width: 215px;
+			}
+			.list img{
+				width: 215px;
+				margin: 0 auto;
+				display: block;
+			}
+			.list h3{
+				text-align: center;
+				font-size: 15px;
+				color: #555;
+				margin-bottom: 10px;
+			}
+			.line{
+				width: 215px;
+				border-top: solid 1px #ccc;
+				margin-left: 19.5px;
+			}
+			.line2{
+				border-top: solid 1px red;
+				margin-top: -1px;
+				width: 0px;
+				transition: all 0.5s;
+			}
+			.list p{
+				font-size: 12px;
+				line-height: 24px;
+				color: #555;
+				width: 215px;
+				margin: 15px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="list">
+			<li>
+				<img src="../../day07/作业/ia_100000006.webp" />
+				<h3>菠萝</h3>
+				<div class="line"></div>
+				<div class="line line2"></div>
+				<p>我们的流线式网页布局设计方案让网站制作和维护成为一件轻松惬意的事</p>
+			</li>
+			<li>
+				<img src="../../day07/作业/ia_100000007.webp" />
+				<h3>菠萝</h3>
+				<div class="line"></div>
+				<div class="line line2"></div>
+				<p>我们的流线式网页布局设计方案让网站制作和维护成为一件轻松惬意的事</p>
+			</li>
+			<li>
+				<img src="../../day07/作业/ia_100000008.webp" />
+				<h3>菠萝</h3>
+				<div class="line"></div>
+				<div class="line line2"></div>
+				<p>我们的流线式网页布局设计方案让网站制作和维护成为一件轻松惬意的事</p>
+			</li>
+			<li>
+				<img src="../../day07/作业/ia_100000009.webp" />
+				<h3>菠萝</h3>
+				<div class="line"></div>
+				<div class="line line2"></div>
+				<p>我们的流线式网页布局设计方案让网站制作和维护成为一件轻松惬意的事</p>
+			</li>
+			<li>
+				<img src="../../day07/作业/ia_100000010.webp" />
+				<h3>菠萝</h3>
+				<div class="line"></div>
+				<div class="line line2"></div>
+				<p>我们的流线式网页布局设计方案让网站制作和维护成为一件轻松惬意的事</p>
+			</li>
+			<li>
+				<img src="../../day07/作业/ia_100000011.webp" />
+				<h3>菠萝</h3>
+				<div class="line"></div>
+				<div class="line line2"></div>
+				<p>我们的流线式网页布局设计方案让网站制作和维护成为一件轻松惬意的事</p>
+			</li>
+			<li>
+				<img src="../../day07/作业/ia_100000012.webp" />
+				<h3>菠萝</h3>
+				<div class="line"></div>
+				<div class="line line2"></div>
+				<p>我们的流线式网页布局设计方案让网站制作和维护成为一件轻松惬意的事</p>
+			</li>
+			<li>
+				<img src="../../day07/作业/ia_100000013.webp" />
+				<h3>菠萝</h3>
+				<div class="line"></div>
+				<div class="line line2"></div>
+				<p>我们的流线式网页布局设计方案让网站制作和维护成为一件轻松惬意的事</p>
+			</li>
+		</ul>
+	</body>
+</html>

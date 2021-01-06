@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var btn = document.querySelector(".btn");
+				document.onclick = function(evt){
+					//获取event对象（）
+					var e = evt||event;
+					console.log(e.button);
+					
+					//2.可视区坐标及屏幕坐标
+					console.log(e.clientX+"，"+e.clientY);
+					console.log(e.screenX+"，"+e.screenY);
+					
+					//
+				};
+				function fn(e){
+					var e = e||event;
+					console.log(e);
+				}
+				fn(2);
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button class="btn">anniu</button>
+	</body>
+</html>

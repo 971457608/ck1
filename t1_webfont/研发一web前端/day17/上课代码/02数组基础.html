@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var arr1 = new Array();//空数组
+			
+			var arr2 = new Array(10);//长度为10的数组
+			
+			var arr3 = new Array(10,20);//数组有两个元素
+			
+			//字面量方式定义数组
+			var arr4 = [];//空数组
+			var arr5 = [10,20,30];
+			
+			//访问数组元素，通过下标去访问
+			console.log(arr5[2]);
+			
+			//length 长度
+			console.log(arr5.length)
+			
+			//赋值
+			arr5[0]=100;
+			console.log(arr5);
+			
+			//遍历数组元素
+			for(var i=0;i<arr5.length;i++){
+				console.log(arr5[i]);
+			}
+			
+			//快速遍历    for   in
+			for(i in  arr5){
+				document.write(arr5[i]+"<br />");
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

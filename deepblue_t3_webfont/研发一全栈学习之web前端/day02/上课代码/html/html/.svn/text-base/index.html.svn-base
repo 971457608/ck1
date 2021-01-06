@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--../ 表示上一级
+		./ 当前-->
+		<img src="../../img/ship.png" />
+	</body>
+</html>

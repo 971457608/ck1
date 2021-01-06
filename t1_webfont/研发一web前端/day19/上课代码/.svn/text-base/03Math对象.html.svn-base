@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			Math.round(3.6)     //四舍五入
+//			Math.random()          //返回(0,1)之间的随机数
+//			Math.max(num1, num2)  //返回较大的数
+//			Math.min(num1, num2)   //返回较小的数
+//			Math.abs(num)     //绝对值
+//			Math.ceil(19.3)     //向上取整
+//			Math.floor(11.8)    //向下取整
+
+			var n1 = 10.5,n2=30;
+			console.log(Math.min(n1,n2));
+			console.log(Math.abs(-10.5));
+			console.log(Math.ceil(20.1));//21
+			console.log(Math.floor(20.9));//20
+			
+			//
+			console.log(Math.random());
+			//例：获取0-10中的随机整数
+			console.log(Math.round(Math.random()*10));
+			
+			////例：获取A-Z中的随机字母[65,90]
+			var n2 = Math.round(Math.random()*25)+65;
+			console.log(String.fromCharCode(n2));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

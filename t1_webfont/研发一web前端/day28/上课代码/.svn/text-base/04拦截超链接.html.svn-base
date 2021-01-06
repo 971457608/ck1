@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload = function(){
+				var a1 = document.querySelector("a");
+				var v1 = document.querySelector("input");
+				a1.onclick = function(){
+//					if(confirm("是否进行跳转！")){
+//						
+//					}else{
+//						return false;
+//					}
+					if(v1.value =="1"){
+						//a1.setAttribute("href","https://www.baidu.com");
+						window.open("https://www.baidu.com");
+					}
+					
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" />
+		<a href="#">百度</a>
+	</body>
+</html>

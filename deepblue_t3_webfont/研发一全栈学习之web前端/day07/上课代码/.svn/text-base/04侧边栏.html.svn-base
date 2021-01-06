@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.list{
+				width:153px;
+				height: 270px;
+				color: white;
+				position: fixed;
+				top: 200px;
+				right: -99px;
+			}
+			.list li{
+				height: 54px;
+				line-height: 54px;
+				background: #30353d;
+				list-style: none;
+				position: relative;
+				left: 0px;
+				transition: left 0.5s;
+			}
+			.list li:hover{
+				left: -99px;
+				background: #00a5ff;
+			}
+			.list li:nth-child(4):hover{
+				left: 0px;
+			}
+			.list .bg{
+				width: 30px;
+				height: 30px;
+				background: url(img/b4a3a24d65966978132a9c1ae38b678d.png) 0px 6px/30px;
+				float: left;
+				margin: 12px;
+			}
+			.list li:nth-child(2) .bg{
+				background: url(img/pic.png) -40px 0px;
+			}
+			.list li:nth-child(3) .bg{
+				background: url(img/pic.png) -40px -184px;
+			}
+			.list li:nth-child(4) .bg{
+				background: url(img/pic.png) -40px -80px;
+			}
+			.list li:nth-child(5) .bg{
+				background: url(img/pic.png) -40px -40px;
+			}
+			.list li:nth-child(1){
+				background: #00a5ff;
+			}
+			.list span{
+				float: left;
+			}
+			.box{
+				width: 182px;
+				position: absolute;
+				top: -70px;
+				left: -200px;
+				border-top: solid 96px rgba(0,0,0,0.6);
+				border-bottom: solid 96px rgba(0,0,0,1);
+				border-radius: 10px;
+				opacity: 0;
+				transition: all 0.5s;
+			}
+			.list li:nth-child(4):hover .box{
+				opacity: 1;
+				left: -210px;
+			}
+			.box img{
+				width: 150px;
+				position: absolute;
+				top: -86px;
+				left: 50%;
+				margin-left: -75px;
+			}
+			.box p{
+				position: absolute;
+				width: 100%;
+				text-align: center;
+				bottom: -88px;
+				height: 16px;
+				line-height: 16px;
+			}
+			.box:before{
+				content: "";
+				width: 0px;
+				height: 0px;
+				border: solid 10px transparent;
+				border-left: solid 10px black;
+				position: absolute;
+				top: -10px;
+				left: 182px;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="list">
+			<li>
+				<div class="bg"></div>
+				<span>在线客服</span>
+			</li>
+			<li>
+				<div class="bg"></div>
+				<span>012345678</span>
+			</li>
+			<li>
+				<div class="bg"></div>
+				<span>教程中心</span>
+			</li>
+			<li>
+				<div class="bg"></div>
+				<div class="box">
+					<img src="img/xx.jpg" />
+					<p>微信客服</p>
+				</div>
+			</li>
+			<li>
+				<div class="bg"></div>
+				<span>QQ客服</span>
+			</li>
+		</ul>
+	</body>
+</html>

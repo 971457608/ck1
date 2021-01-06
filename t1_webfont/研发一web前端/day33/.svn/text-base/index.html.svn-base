@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+			body{
+				height: 100vh;
+				background: url(img/dz2.jpg) 0px 0px/100% 100vh;
+			}
+			.ft{
+				height: 40px;
+				background: black;
+				width: 100%;
+				position: fixed;
+				bottom: 0px;
+				z-index: 99;
+			}
+			.btn{
+				width: 130px;
+				height: 32.5px;
+				text-align: center;
+				line-height: 40px;
+				cursor: pointer;
+				color: white;
+				background: url(img/stop.png) 0px 0px/100%;
+			}
+			.gk{
+				width: 120px;
+				height: 150px;
+				position: fixed;
+				right: 260px;
+				bottom: 60px;
+				text-align: center;
+				background: url(img/fs.png) 0px 0px/100%;
+			}
+			.gk h3{
+				font-size: 20px;
+				margin-top:35px;
+			}
+			.gk span{
+				font-size: 22px;
+				font-weight: 900;
+				color: red;
+			}
+			.gk2{
+				right: 0px;
+			}
+			.gk3{
+				right: 130px;
+			}
+			.active{
+				position: fixed;
+				top: -100px;
+				left: 0px;
+				width: 100px;
+			}
+			.cg,.sb {
+			    width: 550px;
+			    height: 414px;
+			    background: url(img/cg.png);
+			    position: fixed;
+			    top: -414px;
+			    left: 50%;
+			    margin-left: -275px;
+			    transition: all 2s;
+			    z-index: 99;
+			}
+			.sb {
+				height: 414px;
+				position: fixed;
+				left: 50%;
+				top: -414px;
+			    width: 520px;
+			    margin-left: -260px;
+			    transition: all 0.5s;
+			    background: url(img/sp1.png);
+			    z-index: 10;
+			}
+			.zzc{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				background: rgba(0,0,0,0.5);
+				display: none;
+			}
+			.reset-btn {
+			    width: 93px;
+			    height: 36px;
+			    left: 205px;
+			}
+			
+			.next-btn, .reset-btn {
+			    width: 100px;
+			    height: 40px;
+			    position: absolute;
+			    top: 242px;
+			    left: 235px;
+			    cursor: pointer;
+			}
+		</style>
+		<script type="text/javascript">
+			document.addEventListener("DOMContentLoaded",function(){
+				var btn = document.querySelector(".btn");
+				var imgbox = document.querySelector(".imgbox");
+				var guanqia = document.querySelector(".guanqia");
+				var sf = document.querySelector(".sf");
+				var df = document.querySelector(".df");
+				var zzc = document.querySelector(".zzc");
+				var sb = document.querySelector(".sb");
+				var resetbtn = document.querySelector(".reset-btn");
+				var cg = document.querySelector(".cg");
+				var nextbtn = document.querySelector(".next-btn");
+				var dqguanqia=1;
+				var shifen = 0;
+				var defen = 0;
+				var speed = 10;
+				var str="";
+				var arr=[];
+				var timer;
+				btn.onclick = btnclick;
+				function btnclick(){
+					str = "ABCDEFGHIJKLNMOPQRSTUVWXYZ";
+					arr = str.split("");
+					btn.onclick=null;
+					window.onkeyup=null;
+					window.onkeyup =jp; 
+					btn.innerHTML = "正在游戏...";
+					btn.style.opacity = 0.5;
+					for(var i=0;i<dqguanqia+2;i++){
+						creatimg();
+					}
+					timer = setInterval(fn,5);
+				};		
+				function creatimg(){
+					var img1 = document.createElement("img");
+					img1.className = "active";
+					var n1 = Math.floor(Math.random()*arr.length);
+					img1.setAttribute("name",arr[n1]);
+					img1.src = "img/"+arr[n1]+".png";
+					arr.splice(n1,1);
+					var w = document.body.scrollWidth;
+					var h = document.body.offsetHeight;
+					console.log(h);
+					img1.style.left =Math.round(Math.random()*(w-100))+"px";
+					imgbox.appendChild(img1);
+					img1.style.transition="all linear "+speed+"s";
+					var s1 = Math.round(Math.random()*100)+10;
+					setTimeout(function(){
+						img1.style.top = (h-40)+"px";
+					},s1)
+				}
+				//判断失败，下一关
+				function fn(){
+					var oimg = imgbox.querySelectorAll("img");
+					var h = document.body.offsetHeight;
+					for(var j=0;j<oimg.length;j++){
+						console.log(oimg[j].offsetTop);
+						if(oimg[j].offsetTop>=(h-40)){
+							shifen++;
+							sf.innerHTML = shifen;
+							arr.push(oimg[j].getAttribute("name"));
+							imgbox.removeChild(oimg[j]);
+							creatimg();
+						}
+					}
+					//游戏结束
+					if(shifen>=5){
+						clearInterval(timer);
+						shifen=5;
+						sf.innerHTML = shifen;
+						var oimg = imgbox.querySelectorAll("img");
+						for(var j=0;j<oimg.length;j++){
+							var y1 = oimg[j].offsetTop;
+							oimg[j].style.top = y1+"px";
+							oimg[j].style.transition="none";
+						}
+						zzc.style.display = "block";
+						sb.style.top = 0;
+						window.onkeyup =null;
+						window.onkeyup =hc;
+					}
+					//下一关
+					if(defen>=5){
+						defen=5;
+						df.innerHTML = defen;
+						clearInterval(timer);
+						var oimg = imgbox.querySelectorAll("img");
+						for(var j=0;j<oimg.length;j++){
+							var y1 = oimg[j].offsetTop;
+							oimg[j].style.top = y1+"px";
+							oimg[j].style.transition="none";
+						}
+						zzc.style.display = "block";
+						cg.style.top = 0;
+						window.onkeyup =null;
+						window.onkeyup =hc;
+					}
+				}
+				//键盘事件
+				function jp(e){
+					var e = e||event;
+					var a1 = String.fromCharCode(e.keyCode);
+					var oimg = imgbox.querySelectorAll("img");
+					var a2=0;//不存在
+					for(var j=0;j<oimg.length;j++){
+						if(oimg[j].getAttribute("name")==a1){
+							a2=1;
+							break;
+						}
+					}
+					if(a2==0){
+						//按错了
+						shifen++;
+						sf.innerHTML=shifen;
+					}else{
+						defen++;
+						df.innerHTML=defen;
+						arr.push(a1);
+						imgbox.removeChild(oimg[j]);
+						creatimg();
+					}	
+				}
+				//回车
+				function hc(e){			
+					var e = e||event;
+					if(e.keyCode==13){
+						//重新开始
+						if(shifen==5){
+							speed=10;
+							dqguanqia=1;
+							sb.style.top = "-414px";
+							startgame();
+						}else{
+							//下一关
+							speed-=0.5;
+							dqguanqia++;
+							cg.style.top = "-414px";
+							startgame();
+						}
+					}	
+				}
+				function startgame(){
+					imgbox.innerHTML="";
+					defen=0;
+					shifen=0;
+					zzc.style.display = "none";
+					guanqia.innerHTML = dqguanqia;
+					sf.innerHTML=0;
+					df.innerHTML=0;
+					btnclick();	
+				};
+				//点击重新开始
+				resetbtn.onclick = function(){
+					speed=10;
+					dqguanqia=1;
+					sb.style.top = "-414px";
+					startgame();
+				};
+				nextbtn.onclick = function(){
+					//下一关
+					speed-=0.5;
+					dqguanqia++;
+					cg.style.top = "-414px";
+					startgame();
+				};
+			})
+		</script>
+	</head>
+	<body>
+		<div class="ft">
+			<div class="btn">开始游戏</div>
+		</div>
+		<div class="gk">
+			<h3>关卡</h3>
+			<span class="guanqia">1</span>
+		</div>
+		<div class="gk gk2">
+			<h3>失分</h3>
+			<span class="sf">0</span>
+		</div>
+		<div class="gk gk3">
+			<h3>得分</h3>
+			<span class="df">0</span>
+		</div>
+		<div class="imgbox"></div>
+		<div class="zzc"></div>
+		<div class="sb">
+			<div class="reset-btn"></div>
+		</div>
+		<div class="cg" >
+			<div class="next-btn"></div>
+		</div>
+	</body>
+</html>

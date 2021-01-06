@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.obox{
+				width: 80%;
+				border: solid 1px black;
+				margin: 100px auto;
+				position: relative;
+			}
+			.hd button{
+				height: 50px;
+				width: calc(100% / 3);
+				float: left;
+			}
+			.hd{
+				position: relative;
+				overflow: hidden;
+			}
+			.a1{
+				width: 100px;
+				position: absolute;
+				top: -100px;
+				left: 0px;
+				display: none;
+			}
+			.a2{
+				width: 100px;
+				position: absolute;
+				top: -100px;
+				right: 0px;
+				display: none;
+			}
+			.xt1{
+				height: 10px;
+				width: calc(100% / 3);
+				background: red;
+				position: absolute;
+				bottom: 0px;
+				left: 0px;
+				transition: all 0.5s;
+			}
+			.xt2{
+				height: 10px;
+				width: calc(100% / 3);
+				background: blue;
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+				transition: all 0.5s;
+			}
+			.con{
+				clear:both;
+				min-height: 200px;
+			}
+			.tc{
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				right: 0px;
+				bottom: 0px;
+				background: rgba(0,0,0,0.5);
+				display: none;
+			}
+			.tc-con{
+				width: 350px;
+				background: white;
+				position: fixed;
+				left: 50%;
+				top: 150px;
+				margin-left: -180px;
+				padding: 5px;
+				border-radius: 10px;
+			}
+			.tc-con button{
+				width: 60px;
+				margin: 5px;
+			}
+		</style>
+		<script src="../../day34/上课代码/js/jquery-3.4.1.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var str =  "若烟,半梦,雅绿,冰蓝,灵槐,平安,书翠,翠风,香巧,代云,梦曼,幼翠,友巧,听寒,梦柏,醉易,访旋,亦玉,凌萱,访卉,怀亦,笑蓝,春翠,靖柏,夜蕾,冰夏,梦松,书雪,乐枫,念薇,靖雁,寻春,恨山,从寒,忆香";
+				var arr = str.split(",");
+				var str1 ="";
+				$(".name1").html(arr[0]);
+				$(".name2").html(arr[1]);
+				$.each(arr, function(idx,item) {
+					var btn = $("<button></button>");
+					btn.html(arr[idx]);
+					btn.appendTo($(".tc-con"));
+					btn.on("click",function(){
+						if($(this).html()==username){
+							alert("名字冲突，换个名字！");
+						}else{
+							obj.html($(this).html());
+							$(".tc").hide();
+						}
+					});
+				});
+				
+				
+				//选角色
+				var username = "";
+				var obj = {};
+				$(".hd .myname").click(function(){
+					username=$(this).siblings(".myname").html();
+					$(".tc").show();
+					obj = $(this);
+				})
+				//开始pk
+				$(".pk").click(function(){
+					$(".hd button").prop("disabled",true);
+					$(".xt1,.xt2").css("transition","none");
+					$(".con").html("");
+					$(".a1,.a2").hide();
+					var w1 = $(".obox").width()/3;
+					$(".xt1,.xt2").css("width",w1);
+					setTimeout(function(){
+						$(".xt1,.xt2").css("transition","all 0.5s");
+					},100)
+					var i = 0;
+					var n1 = Math.round(Math.random());
+					var xl1 = 100;
+					var xl2 = 100;
+					var timer = setInterval(function(){
+						i++;
+						var p1 = $("<p></p>");
+						txt();
+						//普通招数：15-20
+						//大招（10%）：25-40
+						if(str1.indexOf("大招")!=-1){
+							var diaoxue=Math.round(Math.random()*15+25);
+							var huixue = 0;
+						}else if(str1.indexOf("回复")!=-1){
+							var diaoxue=Math.round(Math.random()*5+15);
+							var huixue = diaoxue;
+						}else{
+							var diaoxue=Math.round(Math.random()*5+15);
+							var huixue = 0;
+						}
+						if(n1==0){
+							if(i%2==0){
+								if(huixue>0){
+									xl1=xl1-diaoxue;
+									xl2=xl2+huixue;
+								}else{
+									xl1=xl1-diaoxue;
+								}
+								p1.html("第"+i+"轮:【"+$(".hd .myname").eq(1).html()+"】"+str1+Math.abs(diaoxue)+"点血量")
+							}else{
+								if(huixue>0){
+									xl2=xl2-diaoxue;
+									xl1=xl1+huixue;
+								}else{
+									xl2=xl2-diaoxue;
+								}
+								p1.html("第"+i+"轮:【"+$(".hd .myname").eq(0).html()+"】"+str1+Math.abs(diaoxue)+"点血量")
+							}
+						}else{
+							if(i%2==0){
+								if(huixue>0){
+									xl2=xl2-diaoxue;
+									xl1=xl1+huixue;
+								}else{
+									xl2=xl2-diaoxue;
+								}
+								p1.html("第"+i+"轮:【"+$(".hd .myname").eq(0).html()+"】"+str1+Math.abs(diaoxue)+"点血量")
+							}else{
+								if(huixue>0){
+									xl1=xl1-diaoxue;
+									xl2=xl2+huixue;
+								}else{
+									xl1=xl1-diaoxue;
+								}
+								p1.html("第"+i+"轮:【"+$(".hd .myname").eq(1).html()+"】"+str1+Math.abs(diaoxue)+"点血量")
+							}
+						}
+						p1.appendTo($(".con"));
+						//改宽度
+						console.log(w1);
+						$('.xt1').css("width",xl1/100*w1+"px");
+						$('.xt2').css("width",xl2/100*w1+"px");
+						if(xl1<=0){
+							clearInterval(timer);
+							$(".a1").attr("src","a1.gif").show();
+							$(".a2").attr("src","a2.gif").show();
+							$(".hd button").prop("disabled",false);
+						}
+						if(xl2<=0){
+							$(".a1").attr("src","a2.gif").show();
+							$(".a2").attr("src","a1.gif").show();
+							clearInterval(timer);
+							$(".hd button").prop("disabled",false);
+						}
+					},1000)
+				})
+				
+				function txt(){
+					$.ajax({
+						type:"get",
+						url:"../../day37/上课代码/json/11.json",
+						async:false,
+						success:function(res){
+							var n1 = Math.floor(Math.random()*res.length);
+							str1=res[n1];
+						}
+					});
+				}				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="obox">
+			<div class="hd">
+				<button class="myname name1">张三</button>
+				<button class="pk">开始PK</button>
+				<button class="myname name2">李四</button>
+				<div class="xt1"></div>
+				<div class="xt2"></div>
+			</div>
+			<img class="a1" src="a1.gif" />
+				<img class="a2" src="a2.gif" />
+			<div class="con"></div>
+		</div>
+		<div class="tc">
+			<div class="tc-con"></div>
+		</div>
+	</body>
+</html>
